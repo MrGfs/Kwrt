@@ -74,9 +74,48 @@ body {
 .group-body.collapsed { display: none; }
 .pkg {
   display: flex; align-items: center; gap: 8px; font-size: 13px; padding: 4px 0;
+  flex-wrap: wrap;
 }
 .pkg input { accent-color: var(--accent); width: 16px; height: 16px; }
 .pkg code { color: var(--accent-2); font-size: 12px; }
+.pkg-desc { flex-basis: 100%; color: var(--muted); font-size: 11.5px; padding-left: 24px; line-height: 1.35; }
+.pkg.locked { opacity: .92; }
+.pkg.locked code { color: var(--accent-2); }
+.lock-icon { font-size: 12px; filter: grayscale(.2); }
+
+/* PAT 状态条 */
+.pat-state {
+  max-width: 880px; margin: 14px auto 0; padding: 8px 18px;
+  font-size: 12.5px; color: var(--muted);
+  background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+}
+.pat-state.ok { color: var(--accent-2); border-color: #1d4d3c; }
+
+/* PAT 弹窗 */
+.modal-mask {
+  position: fixed; inset: 0; background: rgba(0,0,0,.55);
+  display: grid; place-items: center; z-index: 50;
+}
+.modal {
+  width: min(440px, 92vw); background: var(--panel);
+  border: 1px solid var(--border); border-radius: 14px; padding: 22px 22px 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+.modal-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.modal-desc { color: var(--muted); font-size: 12.5px; line-height: 1.5; margin: 0 0 14px; }
+.pat-input {
+  width: 100%; padding: 10px 12px; font-family: monospace; font-size: 13px;
+  background: var(--panel-2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px;
+}
+.pat-error { color: var(--danger); font-size: 12px; min-height: 16px; margin: 6px 0 0; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 14px; }
+.btn-ghost {
+  background: transparent; color: var(--muted);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 18px; font-size: 14px; cursor: pointer;
+}
+.btn-ghost:hover { color: var(--text); border-color: var(--accent); }
 
 .textarea {
   width: 100%; padding: 10px 12px; resize: vertical;

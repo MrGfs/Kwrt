@@ -18,6 +18,9 @@
     <a class="repo-link" id="repoLink" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
   </header>
 
+  <!-- PAT 状态条 -->
+  <div class="pat-state" id="patState">PAT：未填入（构建时需输入）</div>
+
   <main class="container">
     <section class="card">
       <label class="field-label" for="device">① 选择设备</label>
@@ -50,6 +53,21 @@
   <footer class="footer">
     <span>编译在 GitHub Actions 上运行 · 完成后固件自动发布到 Release</span>
   </footer>
+
+  <!-- PAT 输入弹窗 -->
+  <div class="modal-mask hidden" id="patModal">
+    <div class="modal">
+      <div class="modal-title">输入 GitHub PAT</div>
+      <p class="modal-desc">PAT 仅用于本次构建触发，保存在浏览器会话（sessionStorage），
+        不会写入源码。建议使用「仅限 MrGfs/Kwrt 仓库、含 contents + workflows」的细粒度令牌。</p>
+      <input id="patInput" class="pat-input" type="password" placeholder="ghp_xxx 或 github_pat_xxx" autocomplete="off" />
+      <div class="pat-error" id="patError"></div>
+      <div class="modal-actions">
+        <button id="patCancel" class="btn-ghost">取消</button>
+        <button id="patConfirm" class="btn-build">确认并构建</button>
+      </div>
+    </div>
+  </div>
 
   <script src="config.js"></script>
   <script src="app.js"></script>

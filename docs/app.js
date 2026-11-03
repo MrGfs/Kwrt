@@ -1,22 +1,33 @@
 // 自定义固件构建前端逻辑
-// 数据流：选设备+勾包+SSH key → POST /dispatches 触发 Openwrt-AutoBuild.yml
-//        → 轮询 actions/runs → 完成后从 releases 取下载链接
-const { OWNER, REPO, PAT, API } = SITE_CONFIG;
+// 数据流：选设备+勾包+SSH key → 点击「开始构建」→ 弹窗输入 PAT →
+//        POST /dispatches 触发 Openwrt-AutoBuild.yml → 轮询 actions/runs →
+//        完成后从 releases 取下载链接
+const { OWNER, REPO, API } = SITE_CONFIG;
 
 // CORS 说明：GitHub REST API（api.github.com）支持浏览器跨域，直连可用。
 // 若你的站点域名被拦截，把 PROXY 设为你的反代/Cloudflare Function 地址，
-// 由它代发带 token 的请求（前端不再直连 GitHub API，token 也不暴露在前端）。
+// 由它代发带 token 的请求（前端仍直连，但 token 可只发往你自己的代理）。
 const PROXY = ""; // 例如 "https://kwrt-api.example.com"
 
-const BASE_HEADERS = {
-  Authorization: `Bearer ${PAT}`,
+// PAT 在用户点击「开始构建」时弹窗输入，仅保存在本次会话（sessionStorage），不写入源码。
+let sessionPAT = sessionStorage.getItem("kwrt_pat") || "";
+
+function updatePatState() {
+  const el = document.getElementById("patState");
+  if (!el) return;
+  el.textContent = sessionPAT ? "PAT：本次已填入 ✓" : "PAT：未填入（构建时需输入）";
+  el.classList.toggle("ok", !!sessionPAT);
+}
+
+const BASE_HEADERS = () => ({
+  Authorization: `Bearer ${sessionPAT}`,
   Accept: "application/vnd.github+json",
   "Content-Type": "application/json"
-};
+});
 
 async function api(path, opts = {}) {
   const url = PROXY ? `${PROXY}${path}` : `${API}${path}`;
-  const headers = PROXY ? (opts.headers || { "Content-Type": "application/json" }) : BASE_HEADERS;
+  const headers = PROXY ? { "Content-Type": "application/json" } : BASE_HEADERS();
   const res = await fetch(url, { ...opts, headers });
   if (!res.ok) {
     const txt = await res.text().catch(() => "");
@@ -26,10 +37,17 @@ async function api(path, opts = {}) {
   return ct.includes("application/json") ? res.json() : res.text();
 }
 
+// 兼容两种包定义：字符串 或 {pkg, desc, default, locked}
+function pkgName(p) { return typeof p === "string" ? p : p.pkg; }
+function pkgDesc(p) { return (typeof p === "string") ? "" : (p.desc || ""); }
+function pkgDefault(p) { return (typeof p === "string") ? false : !!p.default; }
+function pkgLocked(p) { return (typeof p === "string") ? false : !!p.locked; }
+
 let DEVICES = [], GROUPS = [], selectedTarget = null;
 
 async function init() {
   document.getElementById("repoLink").href = `https://github.com/${OWNER}/${REPO}`;
+  updatePatState();
   const data = await fetch("devices.json").then((r) => r.json());
   DEVICES = data.devices;
   GROUPS = data.groups;
@@ -63,7 +81,7 @@ function renderGroups() {
   wrap.innerHTML = "";
   const d = DEVICES.find((x) => x.target === selectedTarget);
   GROUPS.forEach((g) => {
-    const open = g.id === "qmodem";
+    const open = g.id === "qmodem" || g.id === "system";
     const card = document.createElement("div");
     card.className = "group";
 
@@ -75,16 +93,40 @@ function renderGroups() {
     body.className = "group-body" + (open ? "" : " collapsed");
 
     g.packages.forEach((p) => {
+      const name = pkgName(p);
+      const desc = pkgDesc(p);
+      const locked = pkgLocked(p);
+      const def = (g.id === "qmodem")
+        ? !!(d && d.qmodem_default)
+        : pkgDefault(p);
+
       const label = document.createElement("label");
-      label.className = "pkg";
+      label.className = "pkg" + (locked ? " locked" : "");
+
       const cb = document.createElement("input");
       cb.type = "checkbox";
-      cb.value = p;
-      cb.checked = !!(d && d.qmodem_default && g.id === "qmodem");
-      label.appendChild(cb);
+      cb.value = name;
+      cb.checked = def;
+      cb.disabled = locked; // 锁定项不可取消
+      if (locked) cb.dataset.locked = "1";
+
       const code = document.createElement("code");
-      code.textContent = p;
+      code.textContent = name;
+
+      label.appendChild(cb);
       label.appendChild(code);
+      if (locked) {
+        const lock = document.createElement("span");
+        lock.className = "lock-icon";
+        lock.textContent = "🔒";
+        label.appendChild(lock);
+      }
+      if (desc) {
+        const sub = document.createElement("span");
+        sub.className = "pkg-desc";
+        sub.textContent = desc;
+        label.appendChild(sub);
+      }
       body.appendChild(label);
     });
 
@@ -97,17 +139,52 @@ function renderGroups() {
 
 function collectPackages() {
   const pkgs = [];
-  document.querySelectorAll("#packageGroups input[type=checkbox]:checked").forEach((cb) => pkgs.push(cb.value));
+  // 锁定项始终包含；普通项取勾选
+  document.querySelectorAll("#packageGroups input[type=checkbox]").forEach((cb) => {
+    if (cb.checked || cb.disabled) pkgs.push(cb.value);
+  });
   return pkgs;
 }
 
+// ---- PAT 弹窗 ----
+function openPatModal(onConfirm) {
+  const modal = document.getElementById("patModal");
+  const input = document.getElementById("patInput");
+  const err = document.getElementById("patError");
+  modal.classList.remove("hidden");
+  input.value = sessionPAT || "";
+  err.textContent = "";
+  input.focus();
+  const confirm = () => {
+    const v = input.value.trim();
+    if (!v) { err.textContent = "请输入 PAT 才能触发构建。"; return; }
+    sessionPAT = v;
+    sessionStorage.setItem("kwrt_pat", v);
+    updatePatState();
+    modal.classList.add("hidden");
+    onConfirm();
+  };
+  const cancel = () => modal.classList.add("hidden");
+  document.getElementById("patConfirm").onclick = confirm;
+  document.getElementById("patCancel").onclick = cancel;
+  input.onkeydown = (e) => { if (e.key === "Enter") confirm(); if (e.key === "Escape") cancel(); };
+}
+
 async function startBuild() {
+  if (!sessionPAT) {
+    openPatModal(() => doStartBuild());
+    return;
+  }
+  doStartBuild();
+}
+
+async function doStartBuild() {
   const target = document.getElementById("device").value;
   const packages = collectPackages();
   const sshkey = document.getElementById("sshkey").value.trim();
   const btn = document.getElementById("buildBtn");
   btn.disabled = true;
-  setStatus(`提交构建请求…（target=${target}）`);
+  setStatus(`提交构建请求…（target=${target}，包数量=${packages.length}）`);
   try {
     await api(`/repos/${OWNER}/${REPO}/dispatches`, {
       method: "POST",

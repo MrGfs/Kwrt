@@ -6,6 +6,9 @@ sed -i '$a src-git kiddin9 https://github.com/kiddin9/op-packages.git;main' feed
 # QModem feed (4G/5G 模组管理 + 实时天线信号 antenna_signal 方法)
 # fork: MrGfs/QModem @ custom 分支（基于 FUjr/QModem，叠加 per-antenna RSRP/RSRQ/SINR + 速率因子）
 sed -i '$a src-git qmodem https://github.com/MrGfs/QModem.git;custom' feeds.conf.default
+# 常用 LuCI 应用源（kenzok9/jell，标准 feed 布局，main 分支，活跃维护）
+# 覆盖 openclash/passwall/ssr-plus/adguardhome/mosdns/homeproxy/dockerman/qbittorrent 等
+sed -i '$a src-git jell https://github.com/kenzok8/jell.git;main' feeds.conf.default
 sed -i "/telephony/d" feeds.conf.default
 
 sed -i "s?targets/%S/packages?targets/%S/\$(LINUX_VERSION)?" include/feeds.mk
@@ -74,11 +77,14 @@ sed -i -e "/\(# \)\?REVISION:=/c\REVISION:=$date" -e '/VERSION_CODE:=/c\VERSION_
 
 sed -i 's/option timeout 30/option timeout 120/g' package/system/rpcd/files/rpcd.config
 
+# 修正 kiddin9 / jell feed 里 golang 包对 ../../lang 的引用（指向官方 packages feed）
+for f in $(find package/feeds/kiddin9 package/feeds/jell -name Makefile 2>/dev/null); do
+	sed -i "s?../../lang?$(TOPDIR)/feeds/packages/lang?" "$f"
+done
 sed -i \
 	-e "s/+\(luci\|luci-ssl\|uhttpd\)\( \|$\)/\2/" \
 	-e "s/+nginx\( \|$\)/+nginx-ssl\1/" \
 	-e 's/+python\( \|$\)/+python3/' \
-	-e 's?../../lang?$(TOPDIR)/feeds/packages/lang?' \
 	package/feeds/kiddin9/*/Makefile
 
 sed -i "s/OpenWrt/Kwrt/g" package/base-files/files/bin/config_generate package/base-files/image-config.in package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc config/Config-images.in Config.in include/u-boot.mk include/version.mk || true

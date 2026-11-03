@@ -28,51 +28,81 @@
   ],
   "groups": [
     {
+      "id": "system",
+      "title": "系统基础工具（强制包含，不可取消）",
+      "desc": "编译后必定存在的基础运行环境，锁定不可取消。",
+      "packages": [
+        { "pkg": "bash",                       "desc": "Bourne-Again Shell，完整 shell 环境", "default": true, "locked": true },
+        { "pkg": "curl",                       "desc": "命令行 HTTP 客户端，下载/API 调试", "default": true, "locked": true },
+        { "pkg": "wget-ssl",                   "desc": "支持 HTTPS 的下载工具", "default": true, "locked": true },
+        { "pkg": "nano",                       "desc": "轻量终端文本编辑器", "default": true, "locked": true },
+        { "pkg": "htop",                       "desc": "交互式进程/资源监控", "default": true, "locked": true },
+        { "pkg": "tcpdump",                    "desc": "网络抓包分析", "default": true, "locked": true },
+        { "pkg": "openssh-sftp-server",       "desc": "SFTP 文件传输服务", "default": true, "locked": true },
+        { "pkg": "block-mount",               "desc": "外接存储自动挂载", "default": true, "locked": true },
+        { "pkg": "zram-swap",                 "desc": "内存压缩交换分区", "default": true, "locked": true },
+        { "pkg": "luci-theme-argon",          "desc": "Argon 现代管理员主题（默认皮肤）", "default": true, "locked": true },
+        { "pkg": "luci-app-argon-config",     "desc": "Argon 主题个性化设置", "default": true, "locked": true }
+      ]
+    },
+    {
       "id": "qmodem",
       "title": "QModem · 4G/5G 模组管理（含实时天线信号）",
       "desc": "N1 / M28C 默认勾选。提供 luci-app-qmodem-next 与核心守护，以及蜂窝网络内核驱动。",
       "packages": [
-        "luci-app-qmodem-next",
-        "qmodem",
-        "kmod-usb-net-qmi-wwan",
-        "kmod-usb-net-cdc-mbim",
-        "kmod-usb-net-cdc-ether",
-        "kmod-usb-serial-option",
-        "kmod-usb-serial-wwan",
-        "kmod-usb-serial-ch341",
-        "kmod-mhi-pci-generic",
-        "proto-qmi",
-        "proto-mbim"
+        { "pkg": "luci-app-qmodem-next",      "desc": "QModem LuCI 界面（含每天线 RSRP/RSRQ/SINR 可视化）", "default": true },
+        { "pkg": "qmodem",                     "desc": "QModem 核心守护进程", "default": true },
+        { "pkg": "kmod-usb-net-qmi-wwan",     "desc": "QMI WWAN 内核驱动（高通模组拨号）", "default": true },
+        { "pkg": "kmod-usb-net-cdc-mbim",     "desc": "MBIM 内核驱动（5G 模组）", "default": true },
+        { "pkg": "kmod-usb-net-cdc-ether",    "desc": "CDC Ethernet 内核驱动", "default": true },
+        { "pkg": "kmod-usb-serial-option",    "desc": "USB 串口 option 驱动（AT 指令通道）", "default": true },
+        { "pkg": "kmod-usb-serial-wwan",      "desc": "WWAN 串口驱动", "default": true },
+        { "pkg": "kmod-usb-serial-ch341",     "desc": "CH341 串口驱动", "default": true },
+        { "pkg": "kmod-mhi-pci-generic",      "desc": "MHI PCI 驱动（RM520N 等 PCIe 模组必需）", "default": true },
+        { "pkg": "proto-qmi",                  "desc": "QMI 网络协议支持", "default": true },
+        { "pkg": "proto-mbim",                 "desc": "MBIM 网络协议支持", "default": true }
       ]
     },
     {
       "id": "luci",
-      "title": "常用 LuCI 应用",
-      "desc": "可选的应用层增强。",
+      "title": "常用 LuCI 应用（来自 kenzok8/jell）",
+      "desc": "可选的应用层增强，源：github.com/kenzok8/jell（main 分支，活跃维护）。",
       "packages": [
-        "luci-app-openclash",
-        "luci-app-ssr-plus",
-        "luci-app-upnp",
-        "luci-app-ddns",
-        "luci-app-wol",
-        "luci-app-nginx",
-        "luci-theme-argon"
+        { "pkg": "luci-app-openclash",        "desc": "Clash 代理客户端（TUN / 规则分流）" },
+        { "pkg": "luci-app-passwall",         "desc": "多协议代理与智能分流" },
+        { "pkg": "luci-app-ssr-plus",         "desc": "SSR / V2Ray / Trojan 代理合集" },
+        { "pkg": "luci-app-adguardhome",      "desc": "DNS 级广告与追踪拦截" },
+        { "pkg": "luci-app-mosdns",           "desc": "国内外分流 DNS 解析" },
+        { "pkg": "luci-app-homeproxy",        "desc": "HomeProxy 图形化代理" },
+        { "pkg": "luci-app-smartdns",         "desc": "智能 DNS 提速" },
+        { "pkg": "luci-app-qbittorrent",      "desc": "BT / PT 下载（qBittorrent）" },
+        { "pkg": "luci-app-transmission",     "desc": "BT / PT 下载（Transmission，轻量）" },
+        { "pkg": "luci-app-aria2",            "desc": "多线程下载（HTTP / FTP / BT）" },
+        { "pkg": "luci-app-dockerman",        "desc": "Docker 容器管理" },
+        { "pkg": "luci-app-upnp",             "desc": "UPnP / NAT-PMP 端口映射" },
+        { "pkg": "luci-app-unblockneteasemusic","desc": "网易云音乐灰色歌曲解锁" },
+        { "pkg": "luci-app-filebrowser",      "desc": "网页文件管理器" },
+        { "pkg": "luci-app-samba4",           "desc": "Windows 网络文件共享（SMB）" },
+        { "pkg": "luci-app-netdata",          "desc": "实时系统监控面板" },
+        { "pkg": "luci-app-zerotier",         "desc": "ZeroTier 虚拟局域网" },
+        { "pkg": "luci-app-tailscale",        "desc": "Tailscale 内网穿透" },
+        { "pkg": "luci-app-wolplus",          "desc": "网络唤醒（WOL）" },
+        { "pkg": "luci-app-ttyd",             "desc": "网页终端" },
+        { "pkg": "luci-app-statistics",       "desc": "collectd 图形化统计" }
       ]
     },
     {
-      "id": "nettools",
-      "title": "网络 / 系统工具",
-      "desc": "调试与运维常用工具。",
+      "id": "tools",
+      "title": "网络 / 系统可选工具",
+      "desc": "按需勾选的命令行工具（来自官方 base feed）。",
       "packages": [
-        "curl",
-        "wget-ssl",
-        "tcpdump",
-        "nano",
-        "htop",
-        "bash",
-        "openssh-sftp-server",
-        "block-mount",
-        "zram-swap"
+        { "pkg": "iperf3",                    "desc": "网络带宽测速" },
+        { "pkg": "nmap",                      "desc": "端口 / 主机扫描" },
+        { "pkg": "screen",                    "desc": "终端多路复用器" },
+        { "pkg": "lrzsz",                     "desc": "ZMODEM 串口文件传输" },
+        { "pkg": "bind-dig",                  "desc": "DNS 诊断工具 dig" },
+        { "pkg": "ca-bundle",                 "desc": "CA 根证书包" },
+        { "pkg": "ip-full",                   "desc": "完整 iproute2 工具集" }
       ]
     }
   ]
