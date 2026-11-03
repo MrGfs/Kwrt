@@ -8,8 +8,22 @@
 
 name: Build OpenWrt
 
-on: 
+on:
   repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Target device (e.g. amlogic_meson / m28c)'
+        required: true
+        default: 'amlogic_meson'
+      packages:
+        description: 'Extra packages, space separated (e.g. luci-app-openclash)'
+        required: false
+        default: ''
+      sshkey:
+        description: 'SSH public key to inject into /etc/dropbear/authorized_keys'
+        required: false
+        default: ''
 
 env:
   REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,7 +48,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: ["${{ github.event.client_payload.target }}"]
+        target: ["${{ github.event.inputs.target || github.event.client_payload.target }}"]
         
     steps:
     - name: Checkout
@@ -195,8 +209,8 @@ jobs:
           /bin/bash "devices/${{matrix.target}}/$DIY_SH"
         fi
         # ===== 注入网页勾选的包 (QModem 等) 与可选 SSH 公钥 =====
-        PACKAGES='${{ github.event.client_payload.packages }}'
-        SSHKEY='${{ github.event.client_payload.sshkey }}'
+        PACKAGES='${{ github.event.inputs.packages || github.event.client_payload.packages }}'
+        SSHKEY='${{ github.event.inputs.sshkey || github.event.client_payload.sshkey }}'
         for p in $PACKAGES; do
           [ -n "$p" ] && echo "CONFIG_PACKAGE_${p}=y" >> .config
         done

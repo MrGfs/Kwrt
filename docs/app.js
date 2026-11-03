@@ -186,18 +186,20 @@ async function doStartBuild() {
   btn.disabled = true;
   setStatus(`提交构建请求…（target=${target}，包数量=${packages.length}）`);
   try {
-    await api(`/repos/${OWNER}/${REPO}/dispatches`, {
+    await api(`/repos/${OWNER}/${REPO}/actions/workflows/Openwrt-AutoBuild.yml/dispatches`, {
       method: "POST",
       body: JSON.stringify({
-        event_type: `${target} build`,
-        client_payload: { target, packages: packages.join(" "), sshkey }
+        ref: "25.12",
+        inputs: { target, packages: packages.join(" "), sshkey }
       })
     });
-    setStatus("已提交 dispatch，等待 Actions 拉起构建…");
+    setStatus("已提交 workflow_dispatch，等待 Actions 拉起构建…");
     pollRun(target);
   } catch (e) {
-    setStatus("提交失败：" + e.message);
+    const msg = "提交失败：" + e.message;
+    setStatus(msg);
     btn.disabled = false;
+    alert(msg + "\n\n常见原因：PAT 权限不足（classic 需 workflow scope；fine-grained 需该仓库 Workflows: write）。");
   }
 }
 
@@ -206,13 +208,15 @@ function pollRun(target) {
   if (pollTimer) clearInterval(pollTimer);
   pollTimer = setInterval(async () => {
     try {
-      const runs = await api(`/repos/${OWNER}/${REPO}/actions/runs?event=repository_dispatch&per_page=20`);
-      const list = runs.workflow_runs || [];
-      const run = list.find((r) => r.name === `Build ${target}`) || list[0];
-      if (!run) {
+      const runs = await api(`/repos/${OWNER}/${REPO}/actions/runs?per_page=20`);
+      const list = (runs.workflow_runs || []).filter((r) => r.event === "workflow_dispatch");
+      if (!list.length) {
         setStatus("等待 Actions run 出现…（如长时间无反应，请到仓库 Actions 页查看是否被并发限制）");
         return;
       }
+      // 取最近一次 workflow_dispatch 触发的 run
+      list.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+      const run = list[0];
       updateStatus(run);
       if (run.status === "completed") {
         clearInterval(pollTimer);
