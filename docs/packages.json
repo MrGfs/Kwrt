@@ -1,0 +1,5628 @@
+{
+"generated": "2026-11-03",
+"source": "kenzok8/jell@main",
+"count": 803,
+"packages": [
+{
+"name": "3ginfo",
+"title": "Information about the status of the 3G/4G/5G modem",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "3proxy",
+"title": "3proxy OpenWRT package",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "7z",
+"title": "File archiver with a high compression ratio",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "7zip",
+"title": "7zip",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "LingTiGameAcc",
+"title": "LingTi Game Accelerator",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "MentoHUST-OpenWrt-ipk",
+"title": "A Ruijie Client Daemon",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ShadowVPN",
+"title": "A fast, safe VPN based on libsodium",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "UnblockNeteaseMusic",
+"title": "Revive Netease Cloud Music (NodeJS)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "UnblockNeteaseMusic-Go",
+"title": "Revive Netease Cloud Music (Golang)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "aavmf",
+"title": "ARM (aarch64) Virtual Machine Firmware EFI",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "accel-ppp",
+"title": "accel-ppp VPN server",
+"cn": "",
+"cat": "app",
+"stale": true
+},
+{
+"name": "adguardhome",
+"title": "Network-wide ads and trackers blocking DNS server",
+"cn": "AdGuardHome 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "agentflow",
+"title": "AgentFlow",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "airconnect",
+"title": "AirConnect",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "alac",
+"title": "The Apple Lossless Audio Codec Library",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "alist",
+"title": "A file list program that supports multiple storage",
+"cn": "AList 多网盘聚合",
+"cat": "app",
+"stale": false
+},
+{
+"name": "aliyundrive-webdav",
+"title": "WebDAV server for AliyunDrive",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "alpine-musl-compat",
+"title": "Alpine Linux musl compatibility",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "antileech",
+"title": "AntiLeech for aMule",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "aria2",
+"title": "lightweight download utility (OpenSSL dependencies)",
+"cn": "aria2 下载核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ariang",
+"title": "AriaNg webui",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "atinout",
+"title": "Send AT commands to a modem",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "autocore",
+"title": "auto core loadbalance script.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "autokick-wiwiz",
+"title": "Disconnects wireless user when the user is authenticated and expired via Portal",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "automount",
+"title": "Mount autoconfig hotplug script.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "autoshare-ksmbd",
+"title": "Samba autoconfig hotplug script.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "autoshare-samba",
+"title": "Samba autoconfig hotplug script.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "baidudrive",
+"title": "BaiduDrive",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "baidupcs-go",
+"title": "Terminal utility for Baidu Network Disk",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "baidusdk",
+"title": "Baidu NAS SDK runtime",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "bitsrunlogin-go",
+"title": "Bit Srun auto login tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "boltbrowser",
+"title": "A CLI Browser for BoltDB Files",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "brlaser",
+"title": "Driver for (some) Brother laster printers",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "brook",
+"title": "A cross-platform proxy software",
+"cn": "Brook 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "cdnspeedtest",
+"title": "Getting the fastest ips to your network of CDN",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "cellled",
+"title": "LED cellular signal signal strength",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "chinadns-ng",
+"title": "ChinaDNS next generation, refactoring with epoll and ipset.",
+"cn": "ChinaDNS 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "clashoo",
+"title": "Clashoo (Mihomo)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "clouddrive2",
+"title": "CloudDrive2",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "cloudreve",
+"title": "A project helps you build your own cloud in minutes",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "coremark",
+"title": "CoreMark Embedded Microprocessor Benchmark",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "cpu-checker",
+"title": "tools to help evaluate certain CPU (or BIOS) features",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "cpufreq",
+"title": "CPU Frequency Scaling adjustment tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "cpulimit",
+"title": "CPU usage limiter",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "cups",
+"title": "Common UNIX Printing System (daemon)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "cups-bjnp",
+"title": "BJNP protocol backend for CUPS",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dae",
+"title": "A lightweight and high-performance transparent proxy solution",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "daed",
+"title": "A Modern Dashboard For dae",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "daed-next",
+"title": "daed-next is a backend of dae",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "daemonlogger",
+"title": "Software Network Tap",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dapnet-gateway",
+"title": "DAPNET Gateway for MMDVM",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dcc2-wiwiz",
+"title": "Access your device from anywhere via the web",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ddns-go",
+"title": "A Linux web GUI client of ddns-go",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ddnsto",
+"title": "DDNS.to - the reverse proxy ($(DDNSTO_TYPE))",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "deepbot",
+"title": "DeepSeek AI Telegram Bot",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dhrystone",
+"title": "Dhrystone Benchmark Program",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dns2socks",
+"title": "DNS to SOCKS or HTTP proxy",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dns2socks-rust",
+"title": "DNS forwards to SOCKS5 server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dns2tcp",
+"title": "utility to convert dns query from udp to tcp",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dnsforwarder",
+"title": "A simple DNS forwarder",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "docker",
+"title": "Docker Community Edition CLI",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "docker-lan-bridge",
+"title": "Docker LAN Bridge",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dockerd",
+"title": "Docker Community Edition Daemon",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dockermanager",
+"title": "Docker Manager",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dsvpn",
+"title": "A Dead Simple VPN",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "dufs",
+"title": "A distinctive utility file server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "duperemove",
+"title": "Duplicate file removal tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "eqos-master-wiwiz",
+"title": "Easy QoS(Support speed limit based on IP address)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ethstatus",
+"title": "console-based ethernet statistics monitor",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "fail2banop",
+"title": "fail2banop - Auto ban ip if the login is failed",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "fan2go",
+"title": "dynamic fan speed control",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "fancontrol",
+"title": "Generic hwmon PWM fan controller",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "fastnet",
+"title": "FastNet - network test Web UI",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ffmpeg-static",
+"title": "FFMPEG",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "fibocom-dial",
+"title": "Fibocom Dial",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "fibocom_MHI",
+"title": "Kernel pcie driver for MHI device",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "fibocom_QMI_WWAN",
+"title": "Fibocom Linux USB QMI WWAN Driver",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "filebrowser",
+"title": "Web File Browser",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "filebrowser-q",
+"title": "FileBrowser Quantum - Modern Web File Manager",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "flash-fox",
+"title": "Tool for flashing Qualcomm T99W175 modems",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "floatip",
+"title": "Float IP",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "frp",
+"title": "$(1) - fast reverse proxy $(2)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "fullconenat",
+"title": "FULLCONENAT iptables extension",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "fullconenat-nft",
+"title": "nftables fullcone expression support",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "gallery-dl",
+"title": "Command-line program to download image galleries and collections",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "gcompat",
+"title": "GNU C Library compatibility layer for musl",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "geo2txt",
+"title": "V2ray geosite & geoip unpacking CLI tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "geoview",
+"title": "A geofile toolkit",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "geth",
+"title": "Ethereum Go client",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ghttpd",
+"title": "ghttpd",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "glorytun",
+"title": "Glorytun",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "glorytun-udp",
+"title": "Glorytun",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "gmediarender",
+"title": "Resource efficient UPnP/DLNA renderer",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "gn",
+"title": "A meta-build system that generates build files for Ninja",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "gnurl",
+"title": "A client-side HTTP/HTTPS transfer utility",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "go-nats",
+"title": "A NAT type discovery tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "go-rice",
+"title": "A Go package that makes working with resources",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "go-wol",
+"title": "Simple wake on LAN magic packet generator for golang",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "gobject-introspection-prebuilt",
+"title": "Introspection system for GObject-based libraries",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "gost",
+"title": "GO Simple Tunnel",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "gotop",
+"title": "A terminal based graphical activity monitor",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "gowebdav",
+"title": "Simple Go WebDAV server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "grpcurl",
+"title": "grpcurl is a command-line tool that lets you interact with gRPC servers",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "headscale",
+"title": "A Tailscale control server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "hickory-dns",
+"title": "A plug-in DNS forwarder/splitter",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "homebox",
+"title": "A Toolbox for Home Local Networks Speed Test",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "homeredirect",
+"title": "Port forwarding utility for HomeLede.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "honk",
+"title": "Honk transparent proxy core",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "hysteria",
+"title": "A feature-packed network utility optimized for networks of poor quality",
+"cn": "Hysteria 协议",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ifb-shaper",
+"title": "Per-client HTB traffic shaper (IFB)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ifmetric",
+"title": "Tool for setting the metrics of all IPv4 routes",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "internet-detector",
+"title": "Internet detector",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "internet-detector-mod-email",
+"title": "Email module for internet-detector",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "internet-detector-mod-modem-restart",
+"title": "Modem restart module for internet-detector",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "internet-detector-mod-telegram",
+"title": "Telegram messenger module for internet-detector",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ipcalc",
+"title": "Modern tool to assist in network address calculations for IPv4 and IPv6.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ipset-lists",
+"title": "Service for IPSET address tables",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ipt2socks",
+"title": "Convert iptables to socks5",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "iptvhelper",
+"title": "Scripts for configure IPTV easily",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ipv6-neigh",
+"title": "LAN neighbor DNS updater for hickory-dns",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ircddb-gateway",
+"title": "ircDDBGateway",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "istoreenhance",
+"title": "iStoreEnhance - Fix some net issues for istore",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "joker",
+"title": "Run command as daemon",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "jpcre2",
+"title": "C++ wrapper for PCRE2 Library",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "k3screenctrl",
+"title": "LCD screen controller on PHICOMM K3",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "kai",
+"title": "KAI",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "kai-agent",
+"title": "KAI OpenCode Agent bundle",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "kai_session",
+"title": "KAI_SESSION",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "kaiplus",
+"title": "KaiPlus",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "kismet",
+"title": "Kismet",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ks-cli",
+"title": "KSpeeder command-line client",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "lcdsimple",
+"title": "Simple monitor screen",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libcron",
+"title": "A C++ scheduling library using cron formatting",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libcryptopp",
+"title": "Free C++ class library of cryptographic schemes",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libdouble-conversion",
+"title": "Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libdvbcsa",
+"title": "DVB Common Scrambling Algorithm Library",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libmmdvm",
+"title": "Lua-C library for MMDVM",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libosinfo",
+"title": "library for managing OS information for virtualization",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libvirt",
+"title": "libvirt",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libvirt-glib",
+"title": "libvirt glib integration for events",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libvirt-python",
+"title": "Python bindings for libvirt",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libwxwidgets",
+"title": "Cross-Platform GUI Library",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "libxml2-python",
+"title": "Python bindings for libxml2",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "lingtigameacc",
+"title": "LingTi Game Acc",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "linkease",
+"title": "LinkEase - the file cloud",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "linkease-app-entry",
+"title": "LinkEase application entry arbiter and fallback gateway",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "linkease-common-bin",
+"title": "LinkEase common binary tools",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "linkease-runtime-transition",
+"title": "LinkEase split-runtime transition contract",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "linkeasefull",
+"title": "LinkEase Full - the local web desktop",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "lua-neturl",
+"title": "URL and Query string parser, builder, normalizer for Lua",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "lucky",
+"title": "Lucky dynamic domain name ddns-go service, socat,frp",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "lux",
+"title": "A fast, simple and clean video downloader",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "maxminddb-dump-country",
+"title": "Tool for convert maxmindDB to xt_geoip",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "meig-cm",
+"title": "meig-cm app",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "meig_QMI_WWAN",
+"title": "Meig Linux USB QMI WWAN Driver",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mergerfs",
+"title": "A featureful union filesystem",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mhz",
+"title": "CPU frequency measurement utility",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "microsocks",
+"title": "Tiny, portable SOCKS5 server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mihomo",
+"title": "Another Mihomo Kernel.",
+"cn": "Mihomo(Clash Meta)核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "minieap",
+"title": "Extendable 802.1x client",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "miniupnpd",
+"title": "Lightweight UPnP IGD & PCP/NAT-PMP daemon",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mise",
+"title": "mise - polyglot tool version manager",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mlvpn",
+"title": "Multi-Link Virtual Public Network",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mmdvm",
+"title": "MMDVM Suite",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mmdvm-cal",
+"title": "MMDVM Cal",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mmdvm-host",
+"title": "MMDVM Host",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mmdvm-luci",
+"title": "MMDVM's LuCI plugins.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mnh",
+"title": "NAT hole punching tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "modeminfo",
+"title": "Signal information for 3G/LTE dongle",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "momo",
+"title": "Transparent Proxy with sing-box on OpenWrt.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mosdns",
+"title": "A plug-in DNS forwarder/splitter",
+"cn": "MosDNS 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mptcp",
+"title": "Multipath TCP configuration scripts",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mrtg",
+"title": "The Multi Router Traffic Grapher",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "msd_lite",
+"title": "Program for IP TV streaming on the network via HTTP",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "msr-tools",
+"title": "msr-tools",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mstpd",
+"title": "Multiple Spanning Tree Protocol daemon",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "musl-obstack",
+"title": "Standalone library to implement GNU libc's obstack",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mwan3-autobalancer",
+"title": "MWAN3 Policy Autobalancer",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "mwan3-ledhelper",
+"title": "MWAN3 Led Helper",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "my-default-settings",
+"title": "Default Settings",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "my-dnshelper",
+"title": "my-dnshelper",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "n2n",
+"title": "N2N Peer-to-peer VPN",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "naiveproxy",
+"title": "Make a fortune quietly",
+"cn": "NaiveProxy",
+"cat": "app",
+"stale": false
+},
+{
+"name": "nanohatoled",
+"title": "Support for NanoHatOLED.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "natflow",
+"title": "natflow kernel driver",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ndisc",
+"title": "IPv6 discovery tools",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "netdata",
+"title": "Real-time performance monitoring tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "netmaker",
+"title": "Netmaker for OpenWRT",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "nexttrace",
+"title": "An open source visual route tracking CLI tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "nft-geoip",
+"title": "nftables geoip expression (xt_geoip database)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ngrokc",
+"title": "Secure tunnels to localhost (C++ port)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "nikki",
+"title": "Transparent Proxy with Mihomo on OpenWrt.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "nps",
+"title": "A intranet penetration proxy server ($(1))",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "nvtop",
+"title": "NVTOP",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "nxdn-clients",
+"title": "MMDVM NXDNClients",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "oaf",
+"title": "OAF netfilter module",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ookla-speedtest",
+"title": "Speedtest from Ookla",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ooniprobe",
+"title": "OONI probe-cli",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "open-app-filter",
+"title": "OAF service",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openai",
+"title": "ChatGPT WebUI",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openlist2",
+"title": "A file list program that supports multiple storage",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openvpn-dns-hotplug",
+"title": "Openvpn DNS hotplug",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-Toolkit",
+"title": "A useful and powerful toolkit (DNSPing+FileHash)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-alwaysonline",
+"title": "Hijack/bypass Windows NCSI and iOS portal detection on a network level.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-bandix",
+"title": "Bandix - Network traffic monitoring tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-bcrypt-tool",
+"title": "CLI tool for generating and matching bcrypt hashes",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-caddy",
+"title": "Caddy is an open source web server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-dist-luci",
+"title": "$(1) LuCI interface",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-dogcom",
+"title": "dogcom for OpenWRT",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-einat-ebpf",
+"title": "eBPF-based Endpoint-Independent NAT",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-fastfetch",
+"title": "Fetch and display system information",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-go-stun",
+"title": "A GO implementation of the STUN client",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-luci-proto-tinc",
+"title": "Protocol for TincVPN",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-mproxy",
+"title": "mproxy for OpenWRT",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-natmap",
+"title": "TCP/UDP port mapping tool for full cone NAT",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-natmapt",
+"title": "TCP/UDP port mapping tool for full cone NAT",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-nezhav1",
+"title": "Nezha Agent is the client version 2 of the Nezha Panel.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-peanut",
+"title": "Peanut Script",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-rgmac",
+"title": "A random MAC address generator",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-stuntman",
+"title": "An open source STUN server and client code by john selbie. Compliant with the latest RFCs including 5389, 5769, and 5780. Also includes backwards compatibility for RFC 3489.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "openwrt-ympd",
+"title": "ympd",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "opera-proxy",
+"title": "Standalone Opera VPN proxy client",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "oscam",
+"title": "OSCam is an Open Source Conditional Access Module software",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "osinfo-db",
+"title": "osinfo database files",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ovmf",
+"title": "Open Virtual Machine Firmware (OVMF) BIOS",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "p25-clients",
+"title": "MMDVM P25Clients",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "p910nd",
+"title": "A small non-spooling printer server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "package_kernel_tcp-brutal",
+"title": "TCP Brutal congestion control",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "pcat-manager",
+"title": "PCat System Manager",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "pcat-mgr",
+"title": "Photonicat Manager (Go Edition)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "pdnsd-alt",
+"title": "Proxy DNS Server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "pgyvpn",
+"title": "PuGongYing VPN, Fast networking",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "phicomm-k3screenctrl",
+"title": "LCD screen controller on PHICOMM K3",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "phtunnel",
+"title": "HSK Intranet penetration",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "pikpak-webdav",
+"title": "WebDAV server for Pikpak",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "pingcontrol",
+"title": "Network interface watchdog",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "polipo",
+"title": "A caching web proxy",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "proot",
+"title": "PRoot - chroot, mount --bind, and binfmt_misc",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ps3netsrv",
+"title": "PS3 Game Server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "python-gobject-prebuilt",
+"title": "Python bindings for the GObject library",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "q",
+"title": "A tiny command line DNS client.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qBittorrent",
+"title": "bittorrent client programmed in C++ / Qt",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qBittorrent-Enhanced-Edition",
+"title": "bittorrent client programmed in C++ / Qt",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qBittorrent-static",
+"title": "bittorrent client programmed in C++ / Qt",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qbittorrent",
+"title": "bittorrent client programmed in C++ / Qt",
+"cn": "qBittorrent 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qemu-vms",
+"title": "QEMU Virtual Machines Simple (VMS)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qfirehose",
+"title": "Quectel Firehose Recovery application",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qiyougamebooster",
+"title": "QiYou Game Booster",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qmbimat",
+"title": "Tool for send AT-command via MBIM interface",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qminfo",
+"title": "QMI modeminfo",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qosmate",
+"title": "QoSmate - Quality of Service management tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qt6base",
+"title": "Qt6",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "qt6tools",
+"title": "Qt6 Tools",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "quectel-cm",
+"title": "Quectel dial program",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "quectel_Gobinet",
+"title": "Quectel Linux USB Gobinet Driver",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "quectel_MHI",
+"title": "Kernel pcie driver for MHI device",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "quectel_QMI_WWAN",
+"title": "Quectel Linux USB QMI WWAN Driver",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "quectel_SRPD_PCIE",
+"title": "Kernel pcie driver for SPRD device",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "quectel_cm_5G",
+"title": "Quectel dial program",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "quickjspp",
+"title": "A small and embeddable Javascript engine",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "quickstart",
+"title": "Quickstart, the quick start.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "rapidjson",
+"title": "rapidjson JSON parser/generator for C++",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "rblibtorrent",
+"title": "C++ bittorrent library by Rasterbar Software",
+"cn": "",
+"cat": "app",
+"stale": true
+},
+{
+"name": "redsocks2",
+"title": "Redirect TCP connection to proxy server",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "rhash",
+"title": "C library for computing a wide variety of hash functions",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "rkp-ipid",
+"title": "rkp-ipid",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "rosy-file-server",
+"title": "Rosy File Server over HTTP",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "routergo",
+"title": "RouterGo",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "rrm-nr-distributor",
+"title": "802.11k Neighbor Report distributor daemon",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "rtl8189es",
+"title": "Realtek RTL8189ETV SDIO WiFi",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "rust-bindgen",
+"title": "Automatically generates Rust FFI bindings to C (and some C++) libraries",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "rustdesk-server",
+"title": "RustDesk Server Program",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "scutclient",
+"title": "SCUT Dr.com client",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "sendat",
+"title": "Send AT Commnad",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "shadow-tls",
+"title": "A proxy to expose real tls handshake to the firewall.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "shadowsocks-libev",
+"title": "shadowsocks-libev ss-local",
+"cn": "Shadowsocks 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "shadowsocks-rust",
+"title": "shadowsocks-rust $(1)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "shadowsocksr-libev",
+"title": "shadowsocksr-libev ssr-$(1)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "shellsync",
+"title": "Sync shell scripts",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "simcom_QMI_WWAN",
+"title": "Simcom Linux USB QMI WWAN Driver",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "simple-obfs",
+"title": "A simple obfuscating tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "simpleproxy",
+"title": "simpleproxy OpenWRT package",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "sing-box",
+"title": "The universal proxy platform",
+"cn": "Sing-box 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "smartdns",
+"title": "smartdns",
+"cn": "SmartDNS 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "sms-tool",
+"title": "SMS tool for 3G/4G/5G modems",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "speedtest-web",
+"title": "speedtest-web is a Openwrt package for speedtest-go, a Go backend for LibreSpeed",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "speedtestc",
+"title": "Client for SpeedTest.net infrastructure written in pure C99 standard using only POSIX libraries.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "speedtestcli",
+"title": "SpeedTestCli - network speed test",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "spotifyd",
+"title": "A spotify daemon",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "sqm-autorate",
+"title": "SQM Autorate",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "sqm-scripts-extra",
+"title": "SQM Scripts - additional experimental scripts for testing",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ss-redir",
+"title": "simplify ss-redir usage",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ssd1306",
+"title": "SSD1306 OLED I2C Driver",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ssocks",
+"title": "sSocks",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ssw",
+"title": "SIM-card switcher and tracker",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "sub-web",
+"title": "A WebUI for generating proxy subscription url",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "subconverter",
+"title": "Utility to convert between various proxy subscription format",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "sunpanel",
+"title": "SunPanel, NAS navigation panel.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "supervisor",
+"title": "A system for controlling process state under UNIX",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "switch-lan-play",
+"title": "Switch Lan Play Client",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "systemtap",
+"title": "Simplify the gathering of information",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "sysuh3c",
+"title": "H3C client",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tailscale",
+"title": "Zero config VPN",
+"cn": "Tailscale 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "taskd",
+"title": "Simple Task Manager",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tcping",
+"title": "tcping measures the latency of a tcp-connection (IPv4/IPv6 support)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tcptraceroute",
+"title": "A traceroute implementation using TCP packets.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "telegrambot",
+"title": "Openwrt Telegram Bot",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "teleproxy",
+"title": "MTProxy OpenWRT package",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tinyfecvpn",
+"title": "A Network Improving Tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tinymembench",
+"title": "Simple benchmark for memory",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tinyportmapper",
+"title": "A High-Performance Port Mapping/Forwarding Utility",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "toml11",
+"title": "C++11 header-only toml parser/encoder",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tor-fw-helper",
+"title": "Firewall helper for tor",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "torrserver",
+"title": "torrserver",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "totd",
+"title": "Trick or Treat Daemon (TOTD)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tower",
+"title": "Tower subscription parser and config generator",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tracebox",
+"title": "tracebox",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "transfer",
+"title": "Large file transfer tool with multiple file transfer services support",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "trojan",
+"title": "An unidentifiable mechanism that helps you bypass GFW",
+"cn": "Trojan 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "trojan-go",
+"title": "A Trojan proxy written in Go",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "trojan-plus",
+"title": "An unidentifiable mechanism that helps you bypass GFW. It's compatible with original trojan with experimental features.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tsping",
+"title": "Utility for sending timestamp pings",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tuic-client",
+"title": "TUIC proxy protocol client",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tuic-server",
+"title": "Delicately-TUICed 0-RTT proxy protocol (server)",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tun2socks",
+"title": "tun to socks proxy redirector written on golang",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "tvhelper",
+"title": "TV Helper",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ua2f",
+"title": "Change User-Agent to Fwords",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ucl",
+"title": "Portable lossless data compression library",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "udp2raw",
+"title": "Tunnel which turns UDP Traffic into Encrypted FakeTCP/UDP/ICMP Traffic",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "unishare",
+"title": "Unified Network Shares Manager",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "upx",
+"title": "The Ultimate Packer for eXecutables",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "upx-static",
+"title": "UPX - The Ultimate Packer for eXecutables",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "uugamebooster",
+"title": "NetEase UU Game Booster",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "v2dat",
+"title": "V2ray geo/ip data unpack tools",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "v2ray-core",
+"title": "A platform for building proxies to bypass network restrictions",
+"cn": "V2Ray 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "v2ray-geodata",
+"title": "GeoIP List for V2Ray",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "v2ray-plugin",
+"title": "SIP003 plugin for shadowsocks, based on v2ray",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "v2raya",
+"title": "A Linux web GUI client of Project V",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "verysync",
+"title": "A efficient data transmission tool",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "virt-manager",
+"title": "GUI for managing virtual machines",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "virtualdog",
+"title": "VirtualDog",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "virtualdog-efi",
+"title": "VirtualDog ARM64 UEFI firmware",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "vless-core-cli",
+"title": "Standalone C proxy client (VLESS/Trojan/VMess/SS) with local SOCKS5",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "vlmcsd",
+"title": "A KMS Emulator in C",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "vmease",
+"title": "VmEase - webvirtcloud helper",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "vmlinux-btf",
+"title": "Kernel vmlinux.btf for CO-RE compatibility",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "vncrepeater",
+"title": "UltraVNC repeater for Linux",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "vpn-policy-routing",
+"title": "VPN Policy-Based Routing Service",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "vpnbypass",
+"title": "VPN Bypass Service",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "vsftpd",
+"title": "Fast and secure FTP server",
+"cn": "FTP 服务核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "watchcat",
+"title": "Enable the configuration of programmed reboots or network interface restarts",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "watchdog",
+"title": "Routing Security Watchdog for OpenWrt",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "webdav2",
+"title": "Simple Go WebDAV server.",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "wifidog-wiwiz",
+"title": "wifidog-wiwiz",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "wrtbwmon",
+"title": "A Traffic Usage Monitor",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "wxbase",
+"title": "Cross-platform C++ framework",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "xmm-modem",
+"title": "Fibocom L850/L860/FM350 protocol",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "xradio",
+"title": "Xradio XR819 wireless driver",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "xray-core",
+"title": "A platform for building proxies to bypass network restrictions",
+"cn": "Xray 核心",
+"cat": "app",
+"stale": false
+},
+{
+"name": "xray-plugin",
+"title": "SIP003 plugin for Shadowsocks, based on Xray",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "xt-tls",
+"title": "iptables library for filtering TLS connections",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "xtables-wgobfs",
+"title": "iptables WireGuard obfuscation extension",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "xunyou",
+"title": "xunyou",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ykdl",
+"title": "a video downloader focus on China mainland video sites",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "you-get",
+"title": "Dumb downloader that scrapes the web",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "ysf-clients",
+"title": "MMDVM YSFClients",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "z8102",
+"title": "Install scripts for z8102",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "zip",
+"title": "Archiver to .zip files",
+"cn": "",
+"cat": "app",
+"stale": false
+},
+{
+"name": "luci-lib-iform",
+"title": "LuCI library for json form",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-lib-linkeaseauth",
+"title": "LuCI shared integration for LinkEase apps",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-lib-linkeasefile",
+"title": "LuCI support for linkease file",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-lib-mac-vendor",
+"title": "LuCI mac to vendor map",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-lib-taskd",
+"title": "Task library",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-lib-xterm",
+"title": "Xterm.js library",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-lighttpd",
+"title": "LuCI interface with Lighttpd as Webserver",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-mod-istorenext",
+"title": "iStoreNext",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-mod-listening-ports",
+"title": "Server Listening Ports",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-nginx",
+"title": "LuCI interface with Nginx as Webserver",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-nginxer",
+"title": "Nginxer",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-proto-hev2socks",
+"title": "Support for hev socks5 tunnel",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-proto-minieap",
+"title": "LuCI support for MiniEAP",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-proto-openvpn",
+"title": "Support for OpenVPN",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-proto-quectel",
+"title": "Support for Quectel WWAN modules",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-proto-tun2socks",
+"title": "Support for tun2socks",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-proto-wwan",
+"title": "Support for WWAN/QMI/NCM",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-proto-xmm",
+"title": "Support for Intel XMM",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-themedog",
+"title": "ThemeDog",
+"cn": "",
+"cat": "luci",
+"stale": false
+},
+{
+"name": "luci-app-3cat",
+"title": "LuCI support for simple port forwarding via 3proxy",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-3ginfo-lite",
+"title": "LuCI JS Support for 3ginfo-lite",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-3proxy",
+"title": "3proxy simple webUI",
+"cn": "3proxy 代理",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-LingTiGameAcc",
+"title": "LuCI support for LingTiGameAcc",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-accesscontrol",
+"title": "LuCI Access Control Configuration",
+"cn": "访问控制在",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-accesscontrol-plus",
+"title": "LuCI Access Control Configuration",
+"cn": "访问控制增强",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-adbyby-plus",
+"title": "LuCI support for Adbyby",
+"cn": "广告屏蔽（ADByBy）",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-adguardhome",
+"title": "LuCI app for AdGuardHome",
+"cn": "DNS 级广告与追踪拦截",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-advancedplus",
+"title": "LuCI support for Kucat theme setting by sirpdboy",
+"cn": "系统高级设置增强",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-agentflow",
+"title": "AgentFlow",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-airconnect",
+"title": "LuCI support for AirConnect",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-airoha-npu",
+"title": "LuCI Airoha SoC Status (NPU, CPU, Frame Engine)",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-airplay2",
+"title": "Luci for Apple Airplay2 Receiver",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-aliddns",
+"title": "LuCI Support for aliddns",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-aliyundrive-webdav",
+"title": "LuCI Support for aliyundrive-webdav",
+"cn": "阿里云盘 WebDAV",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-alpha-config",
+"title": "LuCI for Alpha theme configuration",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-alwaysonline",
+"title": "LuCI Support for alwaysonline",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-amlogic",
+"title": "LuCI support for custom TV boxes",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-amule",
+"title": "LuCI support for Amule",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ap-modem",
+"title": "Easy Access AP / Modem",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-apfree-wifidog",
+"title": "LuCI Support for apfree-wifidog",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-arcadia",
+"title": "LuCI support for arcadia",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-argon-config",
+"title": "LuCI for Argon theme configuration",
+"cn": "Argon 主题个性化设置",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-argone-config",
+"title": "LuCI page for Argone Config",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-aria2",
+"title": "LuCI Support for Aria2",
+"cn": "多线程下载（HTTP/FTP/BT）",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-arpbind",
+"title": "LuCI support for ARP binding",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-at-socat",
+"title": "LuCI JS Support for sending at commands using socat",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-atcommands",
+"title": "LuCI JS Support for AT commands",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-atinout",
+"title": "LuCI JS Support for AT commands",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-autoipsetadder",
+"title": "LuCI Support for autoipsetadder",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-autoreboot",
+"title": "LuCI support for Scheduled Reboot",
+"cn": "定时自动重启",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-autorepeater",
+"title": "AutoRepeater LuCI interface",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-autoshell",
+"title": "LuCI support for autoshell",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-baidudrive",
+"title": "baidudrive",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-baidupcs-web",
+"title": "LuCI support for BaiduPCS-Go",
+"cn": "百度网盘 Web 管理",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-bandix",
+"title": "LuCI Bandix app for network traffic monitoring",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-beardropper",
+"title": "luci-app-beardropper",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-bitsrunlogin-go",
+"title": "LuCI app for BitSrunLoginGo (Bit Srun auto login tool)",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-bridge",
+"title": "Luci for support bridge",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-broadbandacc",
+"title": "broadband accelerate",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-campusnet",
+"title": "LuCI app for UJN China-Unicom certification",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cd8021x",
+"title": "a wired IEEE 802.1x client for Luci",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cellled",
+"title": "LuCI application for showing cellular RSSI LED",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cellularstatus",
+"title": "Cellular Network Dashboard",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-change-mac",
+"title": "LuCI for MAC address randomizer",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-chatgpt-web",
+"title": "LuCI Support for chatgpt-web Client",
+"cn": "ChatGPT 网页镜像",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-chinadns-ng",
+"title": "LuCI support for chinadns-ng",
+"cn": "ChinaDNS 防污染 DNS",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-chinesesubfinder",
+"title": "LuCI support for ChineseSubFinder",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-chongyoung",
+"title": "chongyoung for luci",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-chongyoung2.0",
+"title": "chongyoung",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cifs-mount",
+"title": "LuCI for SMB/CIFS Mount",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-clash",
+"title": "LuCI app for clash",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-clashoo",
+"title": "LuCI app for Clashoo",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-clouddrive2",
+"title": "LuCI support for CloudDrive2",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cloudflarespeedtest",
+"title": "LuCI support for Cloudflares Speed Test",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cloudreve",
+"title": "Cloudreve for LuCI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-codeserver",
+"title": "LuCI support for CodeServer",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-control-timewol",
+"title": "LuCI support for Timewol",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-control-webrestriction",
+"title": "LuCI support for Webrestriction",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-control-weburl",
+"title": "LuCI support for Weburl",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-coredns",
+"title": "LuCI Support for coredns",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cpe",
+"title": "luci-app-cpe",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cpu-perf",
+"title": "CPU performance information and management for LuCI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cpu-status",
+"title": "CPU utilization info for the LuCI status page",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cpu-status-mini",
+"title": "CPU utilization info for the LuCI status page",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cpufreq",
+"title": "LuCI for CPU Freq Setting",
+"cn": "CPU 频率调节",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cpulimit",
+"title": "cpulimit configuration module",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cqustdotnet",
+"title": "A LuCI app to simply connect to network of CQUST",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-cupsd",
+"title": "LuCI Support for cupsd",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dae",
+"title": "LuCI app for dae",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-daed",
+"title": "LuCI app for dae dashboard",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-daed-next",
+"title": "LuCI support for daed-next",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-daede",
+"title": "LuCI app for daede dashboard",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ddns",
+"title": "LuCI Support for Dynamic DNS Client (ddns-scripts)",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ddns-go",
+"title": "LuCI Support for Dynamic ddns-go Client",
+"cn": "DDNS 动态域名（多服务商）",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ddnsto",
+"title": "LuCI support for ddnsto",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-demon",
+"title": "LuCI support for demon",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-design-config",
+"title": "Design Theme Configuration",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-diskman",
+"title": "Disk Manager interface for LuCI",
+"cn": "磁盘管理",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-disks-info",
+"title": "Information about connected disk devices (partitions, filesystems, SMART).",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dnscrypt-proxy2",
+"title": "DNSCrypt Proxy LuCI interface",
+"cn": "DNSCrypt 加密 DNS",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dnsfilter",
+"title": "LuCI support for DNSFilter",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dnsforwarder",
+"title": "LuCI for Dnsforwarder",
+"cn": "DNS 转发与防污染",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dnsleaktest",
+"title": "LuCI for DNS Leak Test",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dnsmasq-ipset",
+"title": "LuCI Support for ipset feature of dnsmasq-full",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dnspod",
+"title": "LuCI Support for Auto DNS for dnspod",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dnsproxy",
+"title": "LuCI Support for dnsproxy",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-docker",
+"title": "Luci for Docker-CE",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dockerman",
+"title": "LuCI Support for docker",
+"cn": "Docker 容器管理",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dockermanager",
+"title": "LuCI support for Docker Manager",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dogcom",
+"title": "LuCI app for openwrt-dogcom",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-domain-proxy",
+"title": "Domain Proxy for redsocks.",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dpanel",
+"title": "LuCI support for DPanel",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-drawio",
+"title": "LuCI support for DrawIO",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-droidmodem",
+"title": "LuCI for DroidNet",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-droidnet",
+"title": "LuCI for DroidNet",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dsvpn",
+"title": "LuCI Interface to DSVPN",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dufs",
+"title": "LuCI support for dufs",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-dynv6",
+"title": "dynv6 ddns script",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-easyconfig-transfer",
+"title": "LuCI JS Support for easyconfig transfer statistics",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-easymesh",
+"title": "LuCI Support for easymesh",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-easytier-next",
+"title": "LuCI support for EasyTier Next",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-easyupdate",
+"title": "LuCI support for EasyUpdate From sundaqiang",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-einat",
+"title": "LuCI Support for einat",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-emby",
+"title": "LuCI support for Emby",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-eqos",
+"title": "LuCI support for Easy QoS",
+"cn": "按设备限速 QoS",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-eqosplus",
+"title": "LuCI support for eqosplus.",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-excalidraw",
+"title": "LuCI support for Excalidraw",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-fan",
+"title": "LuCI fan control",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-fancontrol",
+"title": "LuCI support for the generic PWM fan controller",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-fastnet",
+"title": "LuCI support for fastnet",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-fchomo",
+"title": "FullCombo Shark! supplies flexible customization of mihomo on OpenWrt.",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-feishuvpn",
+"title": "LuCI support for FeiShuVpn",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-fileassistant",
+"title": "LuCI support for Fileassistant",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-filebrowser",
+"title": "LuCI support for FileBrowser",
+"cn": "网页文件管理器",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-filebrowser-go",
+"title": "LuCI app for FileBrowser",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-filebrowser-q",
+"title": "LuCI app for FileBrowser Quantum",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-floatip",
+"title": "LuCI support for floatip",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-forcedata",
+"title": "LuCI support for forcedata",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-fullconenat",
+"title": "LuCI support for FullConeNat",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ghttpd",
+"title": "LuCI support for ghttpd",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-glorytun-tcp",
+"title": "LuCI Interface to Glorytun TCP",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-glorytun-udp",
+"title": "LuCI Interface to Glorytun UDP",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-go-aliyundrive-webdav",
+"title": "Luci for go-aliyundrive-webdav",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-gobinetmodem",
+"title": "Modem Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-gogs",
+"title": "LuCI support for Gogs",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-gost",
+"title": "LuCI support for GOST",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-gpioled",
+"title": "LuCI for GPIO LED",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-gpsysupgrade",
+"title": "LuCI for sysupgrade",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-guest-wifi",
+"title": "LuCI support for guest-wifi",
+"cn": "访客 WiFi 隔离",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-haproxy-tcp",
+"title": "luci for haproxy and shadowsocks",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-heimdall",
+"title": "LuCI support for heimdall",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-hermes",
+"title": "LuCI support for Hermes",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-homeassistant",
+"title": "LuCI support for homeassistant",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-homebox",
+"title": "LuCI support for homebox",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-homebridge",
+"title": "LuCI Support for homebridge",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-homeproxy",
+"title": "The modern ImmortalWrt proxy platform for ARM64/AMD64",
+"cn": "HomeProxy 图形化代理",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-homeredirect",
+"title": "LuCI for HomeRedirect",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-honk",
+"title": "LuCI support for Honk",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-htreader",
+"title": "LuCI support for HTReader",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-hypermodem",
+"title": "Hyper Modem Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ifb-shaper",
+"title": "LuCI support for ifb-shaper",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ikoolproxy",
+"title": "LuCI support for koolproxy",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-immich",
+"title": "LuCI support for Immich",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-insomclash",
+"title": "luci-app-insomclash",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-interfaces-statistics",
+"title": "Network interfaces statistics",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-internet-detector",
+"title": "LuCI support for internet-detector",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-iperf",
+"title": "LuCI Support for iPerf3",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ipinfo",
+"title": "LuCI for IP Information",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ipsec-server",
+"title": "LuCI support for IPSec VPN Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ipsec-vpnd",
+"title": "LuCI support for IPSec VPN Server (IKEv1 with PSK and Xauth)",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-iptvhelper",
+"title": "LuCI support for iptvhelper",
+"cn": "IPTV 助手脚本",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-istoredup",
+"title": "LuCI support for istoredup",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-istoreenhance",
+"title": "LuCI support for KSpeeder",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-istorego",
+"title": "LuCI support for istorego",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-istorepanel",
+"title": "LuCI support for 1Panel",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-istorerouter",
+"title": "iStoreRouter",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-istorex",
+"title": "IstoreX",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ittools",
+"title": "LuCI support for ITTools",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-jackett",
+"title": "LuCI support for jackett",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-jederproxy",
+"title": "LuCI Support for jeder(every) proxies",
+"cn": "",
+"cat": "luci-app",
+"stale": true
+},
+{
+"name": "luci-app-jellyfin",
+"title": "LuCI support for jellyfin",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-kaiplus",
+"title": "KaiPlus",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-kodexplorer",
+"title": "LuCI support for KodExplorer",
+"cn": "可道云私有云盘",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ksmbd",
+"title": "Network Shares - Ksmbd the SMB kernel fileserver",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-lanraragi",
+"title": "LuCI support for LANraragi",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-librespeed",
+"title": "LibreSpeed internet speed measurements",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-lingtigameacc",
+"title": "LingTi Game Acc",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-linkease",
+"title": "LuCI support for linkease",
+"cn": "内网穿透（易有云）",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-linkeasefull",
+"title": "LuCI support for linkeasefull",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-linkeasefull-embed",
+"title": "LinkEaseFull LuCI desktop embed",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-lite-watchdog",
+"title": "LuCI JS Support for lite-watchdog the connection monitor",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-log",
+"title": "Advanced syslog and kernel log (tail, search, etc)",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-lorawan-basicstation",
+"title": "LuCI Support for LoRaWAN basicstation",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ltqtapi",
+"title": "LuCI Support for Lantiq Devices",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-lucky",
+"title": "LuCI support for Lucky",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mac",
+"title": "mac for luci",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-macvlan",
+"title": "LuCI Support for macvlan",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mail",
+"title": "LuCI Mail Configuration",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-memos",
+"title": "LuCI support for Memos",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mentohust",
+"title": "LuCI support for MentoHUST",
+"cn": "锐捷校园网认证",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mergerfs",
+"title": "MergerFS",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mfun",
+"title": "LuCI support for mfun",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-microsocks",
+"title": "LuCI support for MicroSocks",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-minieap",
+"title": "minieap 802.1X Client for LuCI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-miniproxy",
+"title": "Easy set transparent proxy for openwrt.",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mlvpn",
+"title": "LuCI Interface to MLVPN",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mmconfig",
+"title": "Configrure modem bands via mmcli utility",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mnh",
+"title": "LuCI Support for mnh",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-modem",
+"title": "LuCI support for Modem",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-modemband",
+"title": "LuCI JS Support for modemband application",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-modeminfo",
+"title": "Information dashboard for 3G/LTE dongle",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-momo",
+"title": "LuCI Support for momo",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mosdns",
+"title": "LuCI Support for mosdns",
+"cn": "国内外分流 DNS 解析",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mproxy",
+"title": "LuCI support for Mproxy",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mptcp",
+"title": "LuCI Support for MPTCP",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-msd_lite",
+"title": "LuCI support for Multi stream daemon lite",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mtphotos",
+"title": "LuCI support for MTPhotos",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-multiaccountdial",
+"title": "multi account Virtual WAN config generator",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-music-remote-center",
+"title": "Luci for Music Remote Center",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mwan3-ledhelper",
+"title": "MWAN3 Ledhelper simple webUI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mwan3-ledhelper-nft",
+"title": "MWAN3 Ledhelper simple webUI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mwan3helper",
+"title": "LuCI support for MWAN3 Helper",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-my-dnshelper",
+"title": "LuCI App for my-dnshelper.",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-mymind",
+"title": "LuCI support for mymind",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-n2n",
+"title": "n2n VPN Configuration module",
+"cn": "N2N 点对点 VPN",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nastools",
+"title": "LuCI support for nastools",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nat6-helper",
+"title": "LuCI support for nat6",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-natmap",
+"title": "LuCI Support for natmap",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-natmapt",
+"title": "LuCI Support for natmap",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-navidrome",
+"title": "LuCI support for Navidrome",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-neko",
+"title": "LuCI support for mihomo",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nekobox",
+"title": "LuCI support for mihomo & sing-box",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-netdata",
+"title": "LuCI Netdata",
+"cn": "实时系统监控面板",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nettask",
+"title": "file transfer tool",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-netwizard",
+"title": "LuCI Support for wizard",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nextcloud",
+"title": "LuCI support for nextcloud",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nezhav1",
+"title": "Nezha Agent is the client version 2 of the Nezha Panel.",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nfs",
+"title": "LuCI support for nfs",
+"cn": "NFS 网络文件共享",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nft-qos",
+"title": "Qos over Nftables",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nginx",
+"title": "LuCI app for Nginx",
+"cn": "Nginx Web 服务器",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nginx-manager",
+"title": "LuCI support for NginxManager From sundaqiang",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nginx-pingos",
+"title": "PingOS server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ngrokc",
+"title": "LuCI support for ngrokc.",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nikki",
+"title": "LuCI Support for nikki",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-njitclient",
+"title": "NJIT 802.1X Client for LuCI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nodogsplash",
+"title": "LuCI support for NoDogSplash",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nps",
+"title": "LuCI for Nps",
+"cn": "NPS 内网穿透",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-nvr",
+"title": "LuCI Support for Network Video Recorder",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-oaf",
+"title": "LuCI app for OAF",
+"cn": "应用层流量控制（行为管理）",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-oled",
+"title": "luci-app-oled",
+"cn": "OLED 屏幕状态显示",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-oneapi",
+"title": "LuCI support for OneAPI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-onekeyap",
+"title": "LuCI support for one-click AP mode switching",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-openai",
+"title": "LuCI support for OpenAI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-openclash",
+"title": "LuCI support for clash",
+"cn": "Clash 代理客户端（TUN/规则分流）",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-openclawmgr",
+"title": "LuCI support for OpenClaw Launcher",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-openlist2",
+"title": "LuCI support for openlist",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-openvpn-client",
+"title": "LuCI support for OpenVPN Client",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-openvpn-server",
+"title": "LuCI support for OpenVPN Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-openvpn-server-client",
+"title": "LuCI support for OpenVPN Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-openwebui",
+"title": "LuCI support for OpenWebUI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-oscam",
+"title": "LuCI Support for oscam",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ota",
+"title": "Simple OTA Update for OpenWrt",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-oui",
+"title": "Local OUI vendor icons for DHCP leases",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-owntone",
+"title": "LuCI support for Owntone",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-package-manager",
+"title": "Package management application",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-packagesync",
+"title": "LuCI Local software source",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-packet-capture",
+"title": "Packet capture application",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-parentcontrol",
+"title": "LuCI support for Parent Control",
+"cn": "家长控制",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-partexp",
+"title": "LuCI Support for Automatic Partition Mount",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-passwall",
+"title": "LuCI support for PassWall",
+"cn": "多协议科学上网面板",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-passwall2",
+"title": "LuCI support for PassWall 2",
+"cn": "PassWall 第二版代理面板",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pcimodem",
+"title": "PCI Modem Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-penpot",
+"title": "LuCI support for Penpot",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pgyvpn",
+"title": "LuCI Support for the PuGongYing VPN",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-photoprism",
+"title": "LuCI support for PhotoPrism",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-phtunnel",
+"title": "LuCI Support for the PHTunnel",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pikpak-webdav",
+"title": "LuCI Support for pikpak-webdav",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pingcontrol",
+"title": "LuCI network interface control",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-plex",
+"title": "LuCI support for Plex",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-poweroffdevice",
+"title": "LuCI support for poweroffdevice Router",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pppoe-relay",
+"title": "LuCI support for PPPoE Relay",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pppoe-server",
+"title": "LuCI support for PPPoE Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pppwn",
+"title": "LuCI support for PPPWN",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pptp-server",
+"title": "LuCI support for PPTP VPN Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pptpd",
+"title": "LuCI page for PPTP VPN Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ps3netsrv",
+"title": "Luci for PS3NETSRV",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-public-ip-monitor",
+"title": "LuCI app for monitoring Public IP",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pushbot",
+"title": "LuCI support for Pushbot",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-pve",
+"title": "LuCI support for pve",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-qbittorrent",
+"title": "LuCI support for qBittorrent",
+"cn": "BT/PT 下载（qBittorrent）",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-qemu-vms",
+"title": "Web UI for QEMU Virtual Machine Simple (VMS)",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-qiyougamebooster",
+"title": "LuCI app for QiYou Game Booster",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-qos-emong",
+"title": "LuCI - Lua Configuration Interface",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-qosmate",
+"title": "LuCI support for QoSmate",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-quickstart",
+"title": "LuCI support for quickstart",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ramfree",
+"title": "LuCI support for RAM free",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-rclone",
+"title": "LuCI support for Rclone",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-redsocks",
+"title": "redsocks config file editor",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-repeater",
+"title": "LuCI support for wireless repeater / client uplink",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-routerdog",
+"title": "RouterDog",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-rtbwmon",
+"title": "LuCI realtime client bandwidth monitor",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-rtorrent",
+"title": "rTorrent LuCI web interface",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-rtp2httpd",
+"title": "LuCI support for rtp2httpd",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-runmynas",
+"title": "LuCI support for runmynas",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-rustdesk-server",
+"title": "LuCI support for RustDesk Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-sakurafrp",
+"title": "LuCI support for SakuraFrp",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-samba4",
+"title": "Network Shares - Samba 4 SMB/CIFS fileserver",
+"cn": "Windows 网络文件共享 SMB",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-school",
+"title": "Luci for School Bypass",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-scutclient",
+"title": "LuCI Support for scutclient",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-serverchan",
+"title": "LuCI support for serverchan",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-shadowrt",
+"title": "LuCI support for shadowrt",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-shadowsocks-libev",
+"title": "LuCI Support for shadowsocks-libev",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-shadowsocks-rust",
+"title": "LuCI Support for shadowsocks-rust",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-shairplay",
+"title": "LuCI Support for Shairplay",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-shanligong",
+"title": "shanligong web for luci",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-shortcutmenu",
+"title": "LuCI Support for shortcutmenu",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-smartdns",
+"title": "LuCI for smartdns",
+"cn": "智能 DNS 提速",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-smartinfo",
+"title": "LuCI disk monitor",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-smartvpn",
+"title": "LuCI support for SmartVPN",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-smbuser",
+"title": "LuCI support for Samba4 Users Management",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-sms-tool",
+"title": "LuCI Support for sms_tool",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-sms-tool-js",
+"title": "LuCI JS Support for sms-tool",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-smstools3",
+"title": "Web UI for smstools3",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-socat",
+"title": "LuCI support for Socat",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-softethervpn",
+"title": "LuCI support for SoftEtherVPN",
+"cn": "SoftEther VPN 服务器",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-spdmodem",
+"title": "SPD Modem Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-speedtest-web",
+"title": "LuCI support for speedtest-web",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-spotifyd",
+"title": "LuCI support for spotifyd",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-sqm-autorate",
+"title": "LuCI Support for SQM Scripts with autorate",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-squid-adv",
+"title": "Advanced LuCI support for Squid",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ss-redir",
+"title": "LuCI Support for ss-redir",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ssr-mudb-server",
+"title": "LuCI support for SSR Mudb Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ssr-plus",
+"title": "luci-app-ssr-plus",
+"cn": "SSR/V2Ray/Trojan 代理合集",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ssrserver-python",
+"title": "LuCI for SSR Server Python",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ssrust",
+"title": "LuCI Support for shadowsocks-rust",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ssw",
+"title": "Luci app for ssw",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-store",
+"title": "LuCI based ipk/apk store",
+"cn": "软件商店",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-subconverter",
+"title": "Subconverter",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-sunpanel",
+"title": "LuCI support for sunpanel",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-supervisord",
+"title": "LuCI support for NginxManager From sundaqiang",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-suselogin",
+"title": "SUSE Login for LuCI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-switch-lan-play",
+"title": "luci-app-switch-lan-play",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-switchtools",
+"title": "LuCI switch tools",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-syncdial",
+"title": "Virtual WAN config generator",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-syncthing",
+"title": "LuCI support for Syncthing",
+"cn": "Syncthing 文件同步",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-synology",
+"title": "luci-app-Synology",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-syscontrol",
+"title": "LuCI for System Control",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-sysctl",
+"title": "LuCI application to manage kernel sysctl parameters",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-systools",
+"title": "LuCI support for SysTools",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-sysuh3c",
+"title": "SYSU H3C 802.1X Client for LuCI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tailscale",
+"title": "LuCI for Tailscale",
+"cn": "Tailscale 内网穿透",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tailscale-community",
+"title": "LuCI support for Tailscale",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-taskplan",
+"title": "LuCI Support for Task Plan",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tasks",
+"title": "luci for taskd",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-taskschedule",
+"title": "luci-app-Taskschedule",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tcpdump",
+"title": "LuCI support for tcpdump",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-telegrambot",
+"title": "TelegramBot simple webUI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-temp-status",
+"title": "Temperature sensors data for the LuCI status page",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tencentcloud-cos",
+"title": "COSFS Client for LuCI",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tencentddns",
+"title": "LuCI Support for tencentddns",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-timecontrol",
+"title": "LuCI support for timecontrol for nftables",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-timedreboot",
+"title": "LuCI Application to timing reboot.",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-timewol",
+"title": "LuCI support for Timewol",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tinyfecvpn",
+"title": "LuCI Support for tinyFecVPN",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tinyfilemanager",
+"title": "LuCI Tiny File Manager",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tn-lldpd",
+"title": "LuCI support for LLDP daemon",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tn-netports",
+"title": "Network Interfaces Ports Status",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-torbp",
+"title": "Tor bridges proxy",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-tower",
+"title": "Tower - manage subscriptions and generate client configs",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-transmission",
+"title": "LuCI Support for Transmission",
+"cn": "BT/PT 下载（Transmission 轻量）",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ttl",
+"title": "Antitethering module for luci-app-firewall",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-turboacc",
+"title": "LuCI support for Flow Offload / Shortcut-FE",
+"cn": "硬件加速（BBR/Flow Offload）",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-typecho",
+"title": "LuCI support for TypeCho",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ua2f",
+"title": "ua2f for luci",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ubuntu",
+"title": "LuCI support for ubuntu",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ubuntu2",
+"title": "LuCI support for Ubuntu2",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-unblockmusic",
+"title": "LuCI support for Unblock NeteaseCloudMusic",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-unblockneteasemusic",
+"title": "LuCI support for UnblockNeteaseMusic (JavaScript)",
+"cn": "网易云灰色歌曲解锁",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-unifi",
+"title": "LuCI support for UnifiController",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-unishare",
+"title": "LuCI for UniShare",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-upnp",
+"title": "UPnP IGD & PCP/NAT-PMP configuration module | Universal Plug and Play",
+"cn": "UPnP/NAT-PMP 端口映射",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-uptimekuma",
+"title": "LuCI support for UptimeKuma",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-usb-printer",
+"title": "USB Printer Share via TCP/IP",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-usbmodem",
+"title": "Modem Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-uugamebooster",
+"title": "LuCI support for UUgamebooster",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-v2ray-server",
+"title": "LuCI support for V2ray Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-vaultwarden",
+"title": "LuCI support for Vaultwarden",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-verysync",
+"title": "LuCI support for Verysync",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-virtualdog",
+"title": "virtualdog",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-vless-core",
+"title": "LuCI support for vless-core",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-vlmcsd",
+"title": "LuCI support for Vlmcsd KMS Server",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-vsftpd",
+"title": "LuCI app for vsftpd",
+"cn": "FTP 服务",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-wan-mac",
+"title": "Generate MAC address for WAN",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-watchcat",
+"title": "LuCI Support for Watchcat",
+"cn": "断网自动重启",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-watchdog",
+"title": "LuCI support for watchdog",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-webadmin",
+"title": "LuCI page for Web Admin",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-webdav",
+"title": "LuCI support for WebDav",
+"cn": "WebDAV 服务",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-webviewdev",
+"title": "Luci App WevviewDev",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-webvirtcloud",
+"title": "LuCI support for webvirtcloud",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-wechatpush",
+"title": "LuCI support for wechatpush",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-weechat",
+"title": "LuCI support for WeeChat IRC client",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-wifidog",
+"title": "LuCI wifidog config",
+"cn": "WiFiDog 认证门户",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-wizard",
+"title": "LuCI Support for wizard",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-wolplus",
+"title": "LuCI support for wolplus From sundaqiang",
+"cn": "网络唤醒 WOL",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-wrtbwmon",
+"title": "A Luci module that uses wrtbwmon to track bandwidth usage",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-wxedge",
+"title": "LuCI support for wxedge",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-xclient",
+"title": "LuCI Support for Xray",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-xjay",
+"title": "LuCI Support for Xray",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-xlnetacc",
+"title": "LuCI Support for XLNetAcc",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-xray",
+"title": "LuCI Support for Xray",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-xray-status",
+"title": "LuCI Support for Xray (status page)",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-xteve",
+"title": "LuCI support for Xteve",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-xunlei",
+"title": "LuCI support for Xunlei",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-xunyou",
+"title": "LuCI support for xunyou",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-xwan",
+"title": "LuCI Support for xwan",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-ympd",
+"title": "LuCI support for ympd",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-yt-dlp",
+"title": "LuCI Support for yt-dlp",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-zdinnav",
+"title": "LuCI support for ZdinNav",
+"cn": "",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-app-zerotier",
+"title": "LuCI for Zerotier",
+"cn": "ZeroTier 虚拟局域网",
+"cat": "luci-app",
+"stale": false
+},
+{
+"name": "luci-theme-alpha",
+"title": "Alpha",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-argon",
+"title": "Argon Theme",
+"cn": "Argon 现代管理员主题",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-argone",
+"title": "Argone Theme",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-aurora",
+"title": "Aurora Theme (A modern browser theme built with Vite and Tailwind CSS)",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-design",
+"title": "Design Theme",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-edge",
+"title": "Edge Theme",
+"cn": "Edge 主题",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-glass",
+"title": "Glass - Apple-inspired glassmorphism theme for LuCI",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-inas",
+"title": "INas Theme",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-istorenas",
+"title": "iStoreNAS Login Page",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-lightblue",
+"title": "Bootstrap lightblue Theme",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-material3",
+"title": "Material3 Theme (default)",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-merona",
+"title": "Bootstrap Merona Theme",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-openmptcprouter",
+"title": "OpenMPTCProuter Theme (default)",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-routerich",
+"title": "Routerich Theme",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-spectra",
+"title": "Spectra Theme",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+},
+{
+"name": "luci-theme-teleofis",
+"title": "Bootstrap Teleofis Theme",
+"cn": "",
+"cat": "luci-theme",
+"stale": false
+}
+]
+}
