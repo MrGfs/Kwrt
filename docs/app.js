@@ -200,9 +200,15 @@ function filterPkgs() {
 function renderSearchResults() {
   const box = document.getElementById("searchResults");
   if (!box) return;
-  const list = filterPkgs();
+  let list = filterPkgs();
+  // 已勾选的包排到最上面（选中置顶，其余保持分类顺序）
+  list = list.slice().sort((a, b) => {
+    const sa = searchSelected.has(a.name) ? 1 : 0;
+    const sb = searchSelected.has(b.name) ? 1 : 0;
+    return sb - sa;
+  });
   const cnt = document.getElementById("searchCount");
-  if (cnt) cnt.textContent = `匹配 ${list.length} 个`;
+  if (cnt) cnt.textContent = `匹配 ${list.length} 个（已勾选置顶）`;
   box.innerHTML = "";
   if (!list.length) {
     box.innerHTML = `<div class="hint">无匹配包，可手动在下方输入包名添加。</div>`;
@@ -211,7 +217,7 @@ function renderSearchResults() {
   const slice = list.slice(0, searchLimit);
   slice.forEach((p) => {
     const label = document.createElement("label");
-    label.className = "pkg result";
+    label.className = "pkg result" + (searchSelected.has(p.name) ? " selected" : "");
     const cb = document.createElement("input");
     cb.type = "checkbox";
     cb.value = p.name;
@@ -219,6 +225,7 @@ function renderSearchResults() {
     cb.addEventListener("change", () => {
       if (cb.checked) searchSelected.add(p.name);
       else searchSelected.delete(p.name);
+      renderSearchResults(); // 勾选后立即置顶
     });
     const code = document.createElement("code");
     code.textContent = p.name;
