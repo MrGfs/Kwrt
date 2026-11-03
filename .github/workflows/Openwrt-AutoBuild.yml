@@ -191,6 +191,17 @@ jobs:
           echo "/bin/bash devices/${{matrix.target}}/$DIY_SH"
           /bin/bash "devices/${{matrix.target}}/$DIY_SH"
         fi
+        # ===== 注入网页勾选的包 (QModem 等) 与可选 SSH 公钥 =====
+        PACKAGES='${{ github.event.client_payload.packages }}'
+        SSHKEY='${{ github.event.client_payload.sshkey }}'
+        for p in $PACKAGES; do
+          [ -n "$p" ] && echo "CONFIG_PACKAGE_${p}=y" >> .config
+        done
+        if [ -n "$SSHKEY" ]; then
+          mkdir -p files/etc/dropbear
+          printf '%s\n' "$SSHKEY" >> files/etc/dropbear/authorized_keys
+          echo "SSH public key injected into files/etc/dropbear/authorized_keys"
+        fi
         cp -Rf ./diy/* ./ || true
 
     - name: Apply patches
@@ -207,7 +218,7 @@ jobs:
       run: |
         cd openwrt
         make defconfig
-        if [[ ! "${{matrix.target}}" =~ (amlogic_meson8b|armsr_armv8|bcm27xx_*|rockchip_armv8|sunxi_*|x86_*|siflower_*) ]]; then
+        if [[ ! "${{matrix.target}}" =~ (amlogic_meson8b|armsr_armv8|bcm27xx_*|rockchip_armv8|sunxi_*|x86_*|siflower_*|m28c) ]]; then
         sed -n '/# Wireless Drivers/,/# end of Wireless Drivers/p' .config | sed -e 's/=m/=n/' >>.config
         sed -i "s/\(kmod-qca.*\)=m/\1=n/" .config
         make defconfig

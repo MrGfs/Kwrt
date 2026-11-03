@@ -1,0 +1,79 @@
+{
+  "devices": [
+    { "target": "amlogic_meson",   "name": "斐讯 N1 / 晶晨 Amlogic (全机型)", "qmodem_default": true },
+    { "target": "m28c",            "name": "Widora MangoPi M28C (RK3528 / 5G CPE)", "qmodem_default": true },
+    { "target": "x86_64",          "name": "x86_64 通用 (软路由/虚拟机)" },
+    { "target": "rockchip_armv8",  "name": "Rockchip RK33xx / RK35xx" },
+    { "target": "bcm27xx_bcm2711", "name": "Raspberry Pi 4 (BCM2711)" },
+    { "target": "bcm27xx_bcm2712", "name": "Raspberry Pi 5 (BCM2712)" },
+    { "target": "mediatek_filogic","name": "MediaTek Filogic (AX 系列)" },
+    { "target": "qualcommax_ipq807x","name": "Qualcomm IPQ807x (AX3600 等)" },
+    { "target": "qualcommax_ipq60xx","name": "Qualcomm IPQ60xx" },
+    { "target": "qualcommax_ipq50xx","name": "Qualcomm IPQ50xx" },
+    { "target": "ramips_mt7621",   "name": "MediaTek MT7621" },
+    { "target": "ipq40xx_generic", "name": "Qualcomm IPQ40xx" },
+    { "target": "ipq806x_generic", "name": "Qualcomm IPQ806x" },
+    { "target": "mediatek_mt7622", "name": "MediaTek MT7622" },
+    { "target": "mvebu_cortexa9",  "name": "Marvell mvebu" },
+    { "target": "sunxi_cortexa53", "name": "Allwinner Cortex-A53" },
+    { "target": "sunxi_cortexa7",  "name": "Allwinner Cortex-A7" },
+    { "target": "ath79_nand",      "name": "Atheros ath79 (NAND)" },
+    { "target": "bcm53xx",         "name": "Broadcom BCM53xx" },
+    { "target": "amlogic_meson8b", "name": "Amlogic S805/S812" },
+    { "target": "armsr_armv8",     "name": "ARM 服务器 (armsr)" },
+    { "target": "airoha_an7581",   "name": "Airoha AN7581" },
+    { "target": "siflower_sf21",   "name": "SiFlower SF21" },
+    { "target": "bcm27xx_bcm2709", "name": "Raspberry Pi 2/3 (BCM2709)" },
+    { "target": "bcm27xx_bcm2710", "name": "Raspberry Pi 3 (BCM2710)" }
+  ],
+  "groups": [
+    {
+      "id": "qmodem",
+      "title": "QModem · 4G/5G 模组管理（含实时天线信号）",
+      "desc": "N1 / M28C 默认勾选。提供 luci-app-qmodem-next 与核心守护，以及蜂窝网络内核驱动。",
+      "packages": [
+        "luci-app-qmodem-next",
+        "qmodem",
+        "kmod-usb-net-qmi-wwan",
+        "kmod-usb-net-cdc-mbim",
+        "kmod-usb-net-cdc-ether",
+        "kmod-usb-serial-option",
+        "kmod-usb-serial-wwan",
+        "kmod-usb-serial-ch341",
+        "kmod-mhi-pci-generic",
+        "proto-qmi",
+        "proto-mbim"
+      ]
+    },
+    {
+      "id": "luci",
+      "title": "常用 LuCI 应用",
+      "desc": "可选的应用层增强。",
+      "packages": [
+        "luci-app-openclash",
+        "luci-app-ssr-plus",
+        "luci-app-upnp",
+        "luci-app-ddns",
+        "luci-app-wol",
+        "luci-app-nginx",
+        "luci-theme-argon"
+      ]
+    },
+    {
+      "id": "nettools",
+      "title": "网络 / 系统工具",
+      "desc": "调试与运维常用工具。",
+      "packages": [
+        "curl",
+        "wget-ssl",
+        "tcpdump",
+        "nano",
+        "htop",
+        "bash",
+        "openssh-sftp-server",
+        "block-mount",
+        "zram-swap"
+      ]
+    }
+  ]
+}

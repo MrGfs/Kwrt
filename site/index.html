@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>自定义 OpenWrt 固件构建 · MrGfs/Kwrt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">KW</span>
+      <div>
+        <h1>自定义 OpenWrt 固件构建</h1>
+        <p class="sub">基于 Kwrt · 在线选设备 / 选包 / 一键编译（含 QModem 实时天线信号）</p>
+      </div>
+    </div>
+    <a class="repo-link" id="repoLink" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <label class="field-label" for="device">① 选择设备</label>
+      <select id="device" class="select"></select>
+      <p class="hint" id="deviceHint"></p>
+    </section>
+
+    <section class="card">
+      <label class="field-label">② 选择软件包</label>
+      <div id="packageGroups" class="groups"></div>
+    </section>
+
+    <section class="card">
+      <label class="field-label" for="sshkey">③ 注入 SSH 公钥（可选）</label>
+      <textarea id="sshkey" class="textarea" rows="3" placeholder="ssh-rsa AAAA... 或 ssh-ed25519 AAAA...（将写入 /etc/dropbear/authorized_keys）"></textarea>
+      <p class="hint">留空则不注入。注入后无需密码即可 SSH 登录。</p>
+    </section>
+
+    <div class="actions">
+      <button id="buildBtn" class="btn-build">开始构建</button>
+      <span id="buildState" class="state"></span>
+    </div>
+
+    <section class="card status-card hidden" id="statusCard">
+      <label class="field-label">构建状态</label>
+      <div id="statusBody" class="status-body"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>编译在 GitHub Actions 上运行 · 完成后固件自动发布到 Release</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

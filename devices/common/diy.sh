@@ -3,6 +3,9 @@
 shopt -s extglob
 
 sed -i '$a src-git kiddin9 https://github.com/kiddin9/op-packages.git;main' feeds.conf.default
+# QModem feed (4G/5G 模组管理 + 实时天线信号 antenna_signal 方法)
+# fork: MrGfs/QModem @ custom 分支（基于 FUjr/QModem，叠加 per-antenna RSRP/RSRQ/SINR + 速率因子）
+sed -i '$a src-git qmodem https://github.com/MrGfs/QModem.git;custom' feeds.conf.default
 sed -i "/telephony/d" feeds.conf.default
 
 sed -i "s?targets/%S/packages?targets/%S/\$(LINUX_VERSION)?" include/feeds.mk
