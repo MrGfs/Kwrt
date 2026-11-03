@@ -92,3 +92,12 @@ sed -i "s/OpenWrt/Kwrt/g" package/base-files/files/bin/config_generate package/b
 sed -i -e "s/set \${s}.country='\${country || ''}'/set \${s}.country='\${country || \"CN\"}'/g" -e "s/set \${s}.disabled=.*/set \${s}.disabled='0'/" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 rm -rf package/feeds/packages/jool
+
+# ---- Quectel RM520N 用户无需 Fibocom 拨号工具 ----
+# jell / kiddin9 feed 中部分包（如默认包链、模组管理类）硬依赖 fibocom-dial /
+# fibocom_MHI / fibocom_QMI_WWAN；这些包在 gcc-14 下编译失败，会拖垮整编。
+# 剥离硬依赖，defconfig 时不再被自动选中。Quectel 走 qmodem + quectel-CM 拨号，
+# 不受影响。
+for f in $(find package/feeds -name Makefile 2>/dev/null); do
+  sed -i -E 's/\+fibocom-dial([ $])/\1/g; s/\+fibocom_MHI([ $])/\1/g; s/\+fibocom_QMI_WWAN([ $])/\1/g' "$f"
+done

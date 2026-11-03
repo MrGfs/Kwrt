@@ -214,6 +214,12 @@ jobs:
         for p in $PACKAGES; do
           [ -n "$p" ] && echo "CONFIG_PACKAGE_${p}=y" >> .config
         done
+        # 双保险：即便被依赖链选中，也强制 Fibocom 拨号工具不编译
+        # （Quectel RM520N 用户不需要 Fibocom 拨号，且其在 gcc-14 下编译失败会拖垮整编）
+        for p in fibocom-dial fibocom_MHI fibocom_QMI_WWAN; do
+          sed -i "/CONFIG_PACKAGE_${p}=/d" .config
+          echo "# CONFIG_PACKAGE_${p} is not set" >> .config
+        done
         if [ -n "$SSHKEY" ]; then
           mkdir -p files/etc/dropbear
           printf '%s\n' "$SSHKEY" >> files/etc/dropbear/authorized_keys
