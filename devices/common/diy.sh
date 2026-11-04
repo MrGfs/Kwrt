@@ -37,7 +37,7 @@ wget -N https://github.com/immortalwrt/immortalwrt/raw/refs/heads/openwrt-25.12/
 wget -N https://github.com/immortalwrt/immortalwrt/raw/refs/heads/openwrt-25.12/package/network/utils/nftables/patches/002-nftables-add-fullcone-expression-support.patch -P package/network/utils/nftables/patches/
 wget -N https://github.com/immortalwrt/immortalwrt/raw/refs/heads/openwrt-25.12/package/libs/libnftnl/patches/001-libnftnl-add-fullcone-expression-support.patch -P package/libs/libnftnl/patches/
 wget -N https://github.com/immortalwrt/immortalwrt/raw/refs/heads/openwrt-25.12/package/firmware/wireless-regdb/patches/600-custom-change-txpower-and-dfs.patch -P package/firmware/wireless-regdb/patches/
-wget -N  https://github.com/coolsnowwolf/lede/raw/refs/heads/master/package/system/fstools/patches/0200-ntfs3-with-utf8.patch -P package/system/fstools/patches/
+wget -N  https://github.com/coolsnowwolf/lede/raw/95e79ab15f865aad738dbea23bc2e06bd7cf3df8/package/system/fstools/patches/0200-ntfs3-with-utf8.patch -P package/system/fstools/patches/
 wget -N https://github.com/immortalwrt/immortalwrt/raw/refs/heads/openwrt-25.12/config/Config-kernel.in -P config/
 
 rm -rf package/libs/openssl package/network/services/ppp
@@ -63,9 +63,16 @@ wget -N https://raw.githubusercontent.com/openwrt/packages/master/lang/golang/go
 
 #sed -i "/call Build\/check-size,\$\$(KERNEL_SIZE)/d" include/image.mk
 
-git_clone_path master https://github.com/coolsnowwolf/lede mv target/linux/generic/hack-6.12
+# pin 到具体 commit，避免 lede master 漂移（曾出现 952 重复补丁导致整编失败）
+git_clone_path 95e79ab15f865aad738dbea23bc2e06bd7cf3df8 https://github.com/coolsnowwolf/lede mv target/linux/generic/hack-6.12
 
-wget -N https://raw.githubusercontent.com/coolsnowwolf/lede/master/target/linux/generic/pending-6.12/613-netfilter_optional_tcp_window_check.patch -P target/linux/generic/pending-6.12/
+# lede master 的 hack-6.12 偶尔会出现“新版改名、旧版残留”的重复补丁
+# （如 952-add-net-conntrack-events-* 与 952-net-conntrack-events-* 同时存在），
+# 二者修改同一批 conntrack 文件，后一个打补丁时 Hunk FAILED 拖垮整编。
+# mv 之后防御性清掉已知的陈旧残留补丁；lede 已删除时 rm -f 无副作用。
+rm -f target/linux/generic/hack-6.12/952-net-conntrack-events-support-multiple-registrant.patch
+
+wget -N https://raw.githubusercontent.com/coolsnowwolf/lede/95e79ab15f865aad738dbea23bc2e06bd7cf3df8/target/linux/generic/pending-6.12/613-netfilter_optional_tcp_window_check.patch -P target/linux/generic/pending-6.12/
 
 # find target/linux/x86 -name "config*" -exec bash -c 'cat kernel.conf >> "{}"' \;
 sed -i 's/max_requests 3/max_requests 20/g' package/network/services/uhttpd/files/uhttpd.config
