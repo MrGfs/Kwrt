@@ -9,6 +9,9 @@
 name: Build OpenWrt
 
 on:
+  push:
+    branches:
+      - build-m28c
   repository_dispatch:
   workflow_dispatch:
     inputs:
@@ -48,7 +51,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: ["${{ github.event.inputs.target || github.event.client_payload.target }}"]
+        target: ["${{ github.event.inputs.target || github.event.client_payload.target || 'm28c' }}"]
         
     steps:
     - name: Checkout
