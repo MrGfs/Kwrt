@@ -1,0 +1,72 @@
+{
+  "devices": [
+    { "target": "amlogic_meson",   "name": "斐讯 N1 / 晶晨 Amlogic (全机型)", "qmodem_default": true },
+    { "target": "m28c",            "name": "Widora MangoPi M28C (RK3528 / 5G CPE)", "qmodem_default": true },
+    { "target": "x86_64",          "name": "x86_64 通用 (软路由/虚拟机)" },
+    { "target": "rockchip_armv8",  "name": "Rockchip RK33xx / RK35xx" },
+    { "target": "bcm27xx_bcm2711", "name": "Raspberry Pi 4 (BCM2711)" },
+    { "target": "bcm27xx_bcm2712", "name": "Raspberry Pi 5 (BCM2712)" },
+    { "target": "mediatek_filogic","name": "MediaTek Filogic (AX 系列)" },
+    { "target": "qualcommax_ipq807x","name": "Qualcomm IPQ807x (AX3600 等)" },
+    { "target": "qualcommax_ipq60xx","name": "Qualcomm IPQ60xx" },
+    { "target": "qualcommax_ipq50xx","name": "Qualcomm IPQ50xx" },
+    { "target": "ramips_mt7621",   "name": "MediaTek MT7621" },
+    { "target": "ipq40xx_generic", "name": "Qualcomm IPQ40xx" },
+    { "target": "ipq806x_generic", "name": "Qualcomm IPQ806x" },
+    { "target": "mediatek_mt7622", "name": "MediaTek MT7622" },
+    { "target": "mvebu_cortexa9",  "name": "Marvell mvebu" },
+    { "target": "sunxi_cortexa53", "name": "Allwinner Cortex-A53" },
+    { "target": "sunxi_cortexa7",  "name": "Allwinner Cortex-A7" },
+    { "target": "ath79_nand",      "name": "Atheros ath79 (NAND)" },
+    { "target": "bcm53xx",         "name": "Broadcom BCM53xx" },
+    { "target": "amlogic_meson8b", "name": "Amlogic S805/S812" },
+    { "target": "armsr_armv8",     "name": "ARM 服务器 (armsr)" },
+    { "target": "airoha_an7581",   "name": "Airoha AN7581" },
+    { "target": "siflower_sf21",   "name": "SiFlower SF21" },
+    { "target": "bcm27xx_bcm2709", "name": "Raspberry Pi 2/3 (BCM2709)" },
+    { "target": "bcm27xx_bcm2710", "name": "Raspberry Pi 3 (BCM2710)" }
+  ],
+  "groups": [
+    {
+      "id": "system",
+      "title": "系统基础工具（强制包含，不可取消）",
+      "desc": "编译后必定存在的基础运行环境，锁定不可取消。",
+      "packages": [
+        { "pkg": "bash",                       "desc": "Bourne-Again Shell，完整 shell 环境", "default": true, "locked": true },
+        { "pkg": "curl",                       "desc": "命令行 HTTP 客户端，下载/API 调试", "default": true, "locked": true },
+        { "pkg": "wget-ssl",                   "desc": "支持 HTTPS 的下载工具", "default": true, "locked": true },
+        { "pkg": "nano",                       "desc": "轻量终端文本编辑器", "default": true, "locked": true },
+        { "pkg": "htop",                       "desc": "交互式进程/资源监控", "default": true, "locked": true },
+        { "pkg": "tcpdump",                    "desc": "网络抓包分析", "default": true, "locked": true },
+        { "pkg": "openssh-sftp-server",       "desc": "SFTP 文件传输服务", "default": true, "locked": true },
+        { "pkg": "block-mount",                "desc": "外接存储自动挂载", "default": true, "locked": true },
+        { "pkg": "zram-swap",                  "desc": "内存压缩交换分区", "default": true, "locked": true },
+        { "pkg": "luci-theme-argon",          "desc": "Argon 现代管理员主题（默认皮肤）", "default": true, "locked": true },
+        { "pkg": "luci-app-argon-config",     "desc": "Argon 主题个性化设置", "default": true, "locked": true }
+      ]
+    },
+    {
+      "id": "qmodem",
+      "title": "QModem · 4G/5G 模组管理（含实时天线信号）",
+      "desc": "N1 / M28C 默认勾选。提供 luci-app-qmodem-next 与核心守护，以及蜂窝网络内核驱动。",
+      "packages": [
+        { "pkg": "luci-app-qmodem-next",      "desc": "QModem LuCI 界面（含每天线 RSRP/RSRQ/SINR 可视化）", "default": true },
+        { "pkg": "qmodem",                     "desc": "QModem 核心守护进程", "default": true },
+        { "pkg": "kmod-usb-net-qmi-wwan",     "desc": "QMI WWAN 内核驱动（高通模组拨号）", "default": true },
+        { "pkg": "kmod-usb-net-cdc-mbim",     "desc": "MBIM 内核驱动（5G 模组）", "default": true },
+        { "pkg": "kmod-usb-net-cdc-ether",    "desc": "CDC Ethernet 内核驱动", "default": true },
+        { "pkg": "kmod-usb-serial-option",    "desc": "USB 串口 option 驱动（AT 指令通道）", "default": true },
+        { "pkg": "kmod-usb-serial-wwan",      "desc": "WWAN 串口驱动", "default": true },
+        { "pkg": "kmod-usb-serial-ch341",     "desc": "CH341 串口驱动", "default": true },
+        { "pkg": "kmod-mhi-pci-generic",      "desc": "MHI PCI 驱动（RM520N 等 PCIe 模组必需）", "default": true },
+        { "pkg": "proto-qmi",                  "desc": "QMI 网络协议支持", "default": true },
+        { "pkg": "proto-mbim",                 "desc": "MBIM 网络协议支持", "default": true }
+      ]
+    },
+    {
+      "id": "search",
+      "title": "应用与工具（从 jell 全量包库搜索添加）",
+      "desc": "源：kenzok8/jell（main，803 个包）。输入包名或备注（如 openclash、代理、下载、DNS）实时筛选，勾选即加入构建；也可手动输入任意包名。"
+    }
+  ]
+}
