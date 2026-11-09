@@ -96,13 +96,27 @@ jobs:
           echo "--- 实际选中的包 ---"
           grep -E '^CONFIG_PACKAGE_.*=[ym]' .config || true
 
-          # 上游通用内核补丁集是按默认 6.12.112 的上下文写的；pin 到 6.12.115 后
-          # backport-6.12/732 在 include/linux/soc/mediatek/mtk_wed.h 上 Hunk #1 FAILED，
-          # toolchain/kernel-headers/.prepared 直接 Error 1，整条 toolchain/install 挂掉。
-          # kernel-headers 与 aic8800 kmod 只需要原生 6.12.115 头文件；清掉 .patch，
-          # config-6.12 / Kconfig 片段 / files/ 全部保留，vermagic 仍由 .115 内核树决定。
-          find target/linux -type f -name '*.patch' -delete
-          echo "--- 剩余内核补丁数 ---"
+          # 上游通用内核补丁集按默认 6.12.112 的上下文写；pin 到 6.12.115 后
+          # backport-6.12/732-v6.18-wifi-mt76-wed... 在 mtk_wed.h 上 Hunk #1 FAILED,
+          # kernel-headers/.prepared 直接 Error 1, 整条 toolchain/install 挂掉。
+          # 但绝不能像上一次那样删光全部 .patch: hack-6.12 / patches-6.12 给
+          # net_device 补了 ieee80211_ptr / netns_local, backports-6.18.55 的
+          # cfg80211 依赖这两个字段; 删掉后 mac80211 编译报
+          # "'struct net_device' has no member named ...", aic8800 依赖链随之 Error 2。
+          # 只剔除编号 >= 732 的 backport(mediatek mt76/wed 系列, rockchip 目标用不到),
+          # hack / pending / target patches / config-6.12 / files/ 全部保留。
+          PRUNED=0
+          for p in target/linux/generic/backport-6.12/*.patch; do
+            [ -f "$p" ] || continue
+            n=$(basename "$p" | cut -d- -f1)
+            case "$n" in ''|*[!0-9]*) continue ;; esac
+            if [ "$n" -ge 732 ]; then
+              echo "prune $p"
+              rm -f "$p"
+              PRUNED=$((PRUNED+1))
+            fi
+          done
+          echo "--- 剔除 ${PRUNED} 个 backport, 剩余内核补丁数 ---"
           find target/linux -type f -name '*.patch' | wc -l
 
       - name: Install toolchain (prerequisite for package/compile)
