@@ -1,4 +1,4 @@
-# 只从上游源码库拉取，编译单个包产出 ipk。
+# 只从上游源码库拉取，编译单个包产出 ipk/ko。
 # 不使用 fork 自定义 feed、QModem、拨号包或设备 .config 里的应用包。
 name: Build IPK (upstream only)
 
@@ -21,6 +21,10 @@ on:
         description: 'Package path under openwrt/ to compile'
         required: true
         default: 'package/kernel/aic8800'
+      kernel_version:
+        description: 'Kernel version, MUST equal target device uname -r'
+        required: true
+        default: '6.12.115'
 
 jobs:
   build:
@@ -45,8 +49,7 @@ jobs:
             gettext git libncurses-dev libssl-dev libelf-dev python3 python3-dev \
             python3-distutils python3-setuptools python3-pyelftools rsync unzip zlib1g-dev file wget \
             libtool libtool-bin cmake swig ecj fastjar java-propose-classpath zstd xz-utils
-          # target/linux/prereq 的 u-boot 检查直接 import elftools；apt 包与 pip 双保险，
-          # 避免 runner 上 apt 源缺包导致 "Please install the Python3 elftools module"。
+          # target/linux/prereq 的 u-boot 检查直接 import elftools；apt 包与 pip 双保险。
           python3 -c 'import elftools' 2>/dev/null || sudo pip3 install pyelftools
 
       - name: Pull upstream source repo only
@@ -56,12 +59,33 @@ jobs:
           git log -1 --oneline
           test -d "${{ github.event.inputs.package }}" || { echo "上游源码缺少 ${{ github.event.inputs.package }}"; exit 1; }
 
-      - name: Minimal config (upstream target config + target package only)
+      - name: Align kernel version + minimal config
         run: |
+          set -e
           cd openwrt
-          # 上游 devices/<target>/.config 只有 target 定义，不含任何 QModem/应用包。
+          KV="${{ github.event.inputs.kernel_version }}"
+          KPATCH=".${KV##*.}"
+          echo "目标内核 = $KV，上游默认内核定义："
+          cat target/linux/generic/kernel-6.12
+
+          # 上游写死 6.12.112，M28C 是 6.12.115；不 pin 的话 ko 的 vermagic 装不上设备。
+          # 从 kernel.org 官方 sha256sums.asc 取对应 tarball 的 hash，替换掉源码里的版本定义。
+          curl -fsSL --retry 3 --max-time 90 \
+            https://cdn.kernel.org/pub/linux/kernel/v6.x/sha256sums.asc -o /tmp/kernel-sha256sums.asc
+          KHASH=$(awk -v v="linux-${KV}.tar.xz" '$2==v{print $1}' /tmp/kernel-sha256sums.asc)
+          test -n "$KHASH" || { echo "kernel.org 没有 ${KV} 的 hash"; exit 1; }
+          sed -i -E "s|^LINUX_VERSION-6\.12 = \.[0-9]+$|LINUX_VERSION-6.12 = ${KPATCH}|" target/linux/generic/kernel-6.12
+          sed -i -E '/^LINUX_KERNEL_HASH-6\.12\./d' target/linux/generic/kernel-6.12
+          echo "LINUX_KERNEL_HASH-${KV} = ${KHASH}" >> target/linux/generic/kernel-6.12
+          echo "--- 对齐后 ---"
+          cat target/linux/generic/kernel-6.12
+
+          # 上游 devices/<target>/.config 只有 target 定义；defconfig 会展开出 180+ 个默认包。
+          # package/<x>/compile 会遍历 package-y + package-m，任一无关包（gpio-button-hotplug、
+          # linux-firmware 等）失败就全盘 Error 2，所以除目标包外全部显式置 n。
           cp "../devices/${{ github.event.inputs.target }}/.config" .config
-          # =m 只生成 ipk，不进固件 rootfs，避免拉起整条安装链。
+          make defconfig
+          sed -i -E 's/^CONFIG_PACKAGE_([^=]+)=[ym]$/# CONFIG_PACKAGE_\1 is not set/' .config
           cat >> .config <<'EOF'
           CONFIG_PACKAGE_kmod-aic8800-sdio=m
           CONFIG_PACKAGE_aic8800-sdio-firmware=m
@@ -69,41 +93,51 @@ jobs:
           CONFIG_PACKAGE_kmod-mac80211=m
           EOF
           make defconfig
-          echo "--- defconfig 后 =y 包数（降级前） ---"
-          grep -c '^CONFIG_PACKAGE_.*=y' .config || true
-          # 关键：=y 的包会进入 package-y 列表，make package/<x>/compile 会把它们全串编一遍，
-          # 任一无关包（如 gpio-button-hotplug）失败就全盘 Error 2。全降成 =m 只产 ipk、
-          # 不进 rootfs，package-y 变空，编译链收敛到 aic8800 自身依赖。
-          sed -i -E 's/^(CONFIG_PACKAGE_[^=]+)=y$/\1=m/' .config
-          make defconfig
-          echo "--- 降级后 =y 包数 / =m 包数 ---"
-          grep -c '^CONFIG_PACKAGE_.*=y' .config || true
-          grep -c '^CONFIG_PACKAGE_.*=m' .config || true
+          echo "--- 实际选中的包 ---"
+          grep -E '^CONFIG_PACKAGE_.*=[ym]' .config || true
 
       - name: Install toolchain (prerequisite for package/compile)
         run: |
           cd openwrt
-          # 不加 V=s：整编 toolchain 的全量命令行会把日志撑到几十 MB。
-          # 失败时再以 -j1 V=s 单线程复跑一次，既是重试也保留可读的诊断信息。
+          # 不加 V=s：toolchain 全量命令行会把日志撑到几十 MB。
           make toolchain/install -j"$(nproc)" || make toolchain/install -j1 V=s
+
+      - name: Prepare kernel build tree (kmod prerequisite)
+        run: |
+          cd openwrt
+          # kmod 编译需要 $(LINUX_DIR)/.config 与 Module.symvers。
+          # toolchain/install 只装交叉工具链，不碰内核树；缺这步会报
+          # "No rule to make target .../linux-6.12.x/.config"。
+          make target/linux/compile -j"$(nproc)" || make target/linux/compile -j1 V=s
 
       - name: Compile only the ipk
         id: compile
         continue-on-error: true
         run: |
           cd openwrt
-          make "${{ github.event.inputs.package }}/compile" -j"$(nproc)" || \
-            make "${{ github.event.inputs.package }}/compile" -j1 V=s
+          make "${{ github.event.inputs.package }}/compile" -j1 V=s
 
-      - name: Collect ipk
+      - name: Collect ipk + ko
+        if: always()
         run: |
+          echo "compile outcome = ${{ steps.compile.outcome }}"
           mkdir -p out
-          find openwrt/bin -type f \( -name '*aic8800*.ipk' -o -name '*aic8800*.apk' \) -exec cp -v {} out/ \;
+          # 25.12 上游用 apk 打包，设备是 opkg；两种格式都收，另外把裸 ko 也收进 artifact，
+          # 这样即使包格式不匹配也能直接把 ko 推到 /lib/modules/<uname -r>/。
+          find openwrt/bin -type f \( -iname '*aic8800*.ipk' -o -iname '*aic8800*.apk' \) -exec cp -v {} out/ \; || true
+          find openwrt/build_dir -type f -iname 'aic8800*.ko' -exec cp -v {} out/ \; || true
+          echo "--- ko vermagic ---"
+          for f in out/*.ko; do
+            [ -f "$f" ] || continue
+            printf '%s: ' "$(basename "$f")"
+            strings "$f" | grep -m1 '^vermagic=' || echo '(none)'
+          done
           echo "--- 产物 ---"
           ls -lh out/
 
       - name: Upload ipk
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: aic8800-ipk
           path: out/
