@@ -96,27 +96,56 @@ jobs:
           echo "--- 实际选中的包 ---"
           grep -E '^CONFIG_PACKAGE_.*=[ym]' .config || true
 
-          # 上游通用内核补丁集按默认 6.12.112 的上下文写；pin 到 6.12.115 后
-          # backport-6.12/732-v6.18-wifi-mt76-wed... 在 mtk_wed.h 上 Hunk #1 FAILED,
-          # kernel-headers/.prepared 直接 Error 1, 整条 toolchain/install 挂掉。
-          # 但绝不能像上一次那样删光全部 .patch: hack-6.12 / patches-6.12 给
-          # net_device 补了 ieee80211_ptr / netns_local, backports-6.18.55 的
-          # cfg80211 依赖这两个字段; 删掉后 mac80211 编译报
-          # "'struct net_device' has no member named ...", aic8800 依赖链随之 Error 2。
-          # 只剔除编号 >= 732 的 backport(mediatek mt76/wed 系列, rockchip 目标用不到),
-          # hack / pending / target patches / config-6.12 / files/ 全部保留。
+          # pin 到 6.12.115 后上游补丁集有两处硬冲突:
+          #   backport-6.12/732-v6.18-wifi-mt76-wed... 在 mtk_wed.h Hunk #1 FAILED;
+          #   pending-6.12/720-01-net-phy-realtek... "can't find file to patch";
+          # 两者都让 toolchain/kernel-headers/.prepared Error 1。
+          # 但绝不能删光全部 .patch: hack-6.12 给 net_device 补了
+          # ieee80211_ptr / netns_local, backports-6.18.55 的 cfg80211 依赖这两个字段,
+          # 删掉后 mac80211 编译报 "'struct net_device' has no member named ..."。
+          KV="${{ github.event.inputs.kernel_version }}"
           PRUNED=0
           for p in target/linux/generic/backport-6.12/*.patch; do
             [ -f "$p" ] || continue
             n=$(basename "$p" | cut -d- -f1)
             case "$n" in ''|*[!0-9]*) continue ;; esac
             if [ "$n" -ge 732 ]; then
-              echo "prune $p"
-              rm -f "$p"
-              PRUNED=$((PRUNED+1))
+              echo "prune backport $p"; rm -f "$p"; PRUNED=$((PRUNED+1))
             fi
           done
-          echo "--- 剔除 ${PRUNED} 个 backport, 剩余内核补丁数 ---"
+          for p in target/linux/generic/pending-6.12/*.patch; do
+            [ -f "$p" ] || continue
+            echo "prune pending $p"; rm -f "$p"; PRUNED=$((PRUNED+1))
+          done
+
+          # 剩余补丁在干净的 6.12.115 内核树上按 OpenWrt 的顺序逐个试应用,
+          # 不能应用的自动剔除, 避免 target/linux/compile 阶段再炸一次。
+          PROBE=/tmp/kprobe
+          rm -rf "$PROBE" /tmp/kprobe.tar.xz
+          mkdir -p "$PROBE"
+          curl -fsSL --retry 3 --max-time 300 \
+            "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${KV}.tar.xz" -o /tmp/kprobe.tar.xz
+          tar -xf /tmp/kprobe.tar.xz -C "$PROBE" --strip-components=1
+          for d in target/linux/generic/files-6.12 target/linux/rockchip/files-6.12; do
+            if [ -d "$d" ]; then cp -a "$d/." "$PROBE/"; fi
+          done
+          for d in target/linux/generic/hack-6.12 target/linux/generic/backport-6.12 \
+                   target/linux/generic/pending-6.12 target/linux/rockchip/patches-6.12; do
+            [ -d "$d" ] || continue
+            for p in "$d"/*.patch; do
+              [ -f "$p" ] || continue
+              A="$(pwd)/$p"
+              if ( cd "$PROBE" && patch -p1 --batch --forward --no-backup-if-mismatch --dry-run --silent < "$A" >/dev/null 2>&1 ); then
+                if ! ( cd "$PROBE" && patch -p1 --batch --forward --no-backup-if-mismatch --silent < "$A" >/dev/null 2>&1 ); then
+                  echo "prune apply $p"; rm -f "$p"; PRUNED=$((PRUNED+1))
+                fi
+              else
+                echo "prune incompatible $p"; rm -f "$p"; PRUNED=$((PRUNED+1))
+              fi
+            done
+          done
+          rm -rf "$PROBE" /tmp/kprobe.tar.xz
+          echo "--- 剔除 ${PRUNED} 个补丁, 保留内核补丁数 ---"
           find target/linux -type f -name '*.patch' | wc -l
 
       - name: Install toolchain (prerequisite for package/compile)
