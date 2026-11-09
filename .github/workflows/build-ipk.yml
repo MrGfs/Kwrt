@@ -96,6 +96,15 @@ jobs:
           echo "--- 实际选中的包 ---"
           grep -E '^CONFIG_PACKAGE_.*=[ym]' .config || true
 
+          # 上游通用内核补丁集是按默认 6.12.112 的上下文写的；pin 到 6.12.115 后
+          # backport-6.12/732 在 include/linux/soc/mediatek/mtk_wed.h 上 Hunk #1 FAILED，
+          # toolchain/kernel-headers/.prepared 直接 Error 1，整条 toolchain/install 挂掉。
+          # kernel-headers 与 aic8800 kmod 只需要原生 6.12.115 头文件；清掉 .patch，
+          # config-6.12 / Kconfig 片段 / files/ 全部保留，vermagic 仍由 .115 内核树决定。
+          find target/linux -type f -name '*.patch' -delete
+          echo "--- 剩余内核补丁数 ---"
+          find target/linux -type f -name '*.patch' | wc -l
+
       - name: Install toolchain (prerequisite for package/compile)
         run: |
           cd openwrt
@@ -112,7 +121,6 @@ jobs:
 
       - name: Compile only the ipk
         id: compile
-        continue-on-error: true
         run: |
           cd openwrt
           make "${{ github.event.inputs.package }}/compile" -j1 V=s
@@ -141,4 +149,5 @@ jobs:
         with:
           name: aic8800-ipk
           path: out/
-          if-no-files-found: error
+          # 编译失败时不让上传步再制造第二个失败，run 结果只反映真实编译结果。
+          if-no-files-found: warn
