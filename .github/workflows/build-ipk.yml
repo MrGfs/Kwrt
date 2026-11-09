@@ -43,8 +43,11 @@ jobs:
           sudo apt-get install -y --no-install-recommends \
             build-essential ccache clang flex bison g++ gawk gcc-multilib g++-multilib \
             gettext git libncurses-dev libssl-dev libelf-dev python3 python3-dev \
-            python3-distutils python3-setuptools rsync unzip zlib1g-dev file wget \
+            python3-distutils python3-setuptools python3-pyelftools rsync unzip zlib1g-dev file wget \
             libtool libtool-bin cmake swig ecj fastjar java-propose-classpath zstd xz-utils
+          # target/linux/prereq 的 u-boot 检查直接 import elftools；apt 包与 pip 双保险，
+          # 避免 runner 上 apt 源缺包导致 "Please install the Python3 elftools module"。
+          python3 -c 'import elftools' 2>/dev/null || sudo pip3 install pyelftools
 
       - name: Pull upstream source repo only
         run: |
@@ -66,20 +69,31 @@ jobs:
           CONFIG_PACKAGE_kmod-mac80211=m
           EOF
           make defconfig
-          echo "--- defconfig 后 =y 包数 ---"
+          echo "--- defconfig 后 =y 包数（降级前） ---"
           grep -c '^CONFIG_PACKAGE_.*=y' .config || true
+          # 关键：=y 的包会进入 package-y 列表，make package/<x>/compile 会把它们全串编一遍，
+          # 任一无关包（如 gpio-button-hotplug）失败就全盘 Error 2。全降成 =m 只产 ipk、
+          # 不进 rootfs，package-y 变空，编译链收敛到 aic8800 自身依赖。
+          sed -i -E 's/^(CONFIG_PACKAGE_[^=]+)=y$/\1=m/' .config
+          make defconfig
+          echo "--- 降级后 =y 包数 / =m 包数 ---"
+          grep -c '^CONFIG_PACKAGE_.*=y' .config || true
+          grep -c '^CONFIG_PACKAGE_.*=m' .config || true
 
       - name: Install toolchain (prerequisite for package/compile)
         run: |
           cd openwrt
-          make toolchain/install -j"$(nproc)" V=s
+          # 不加 V=s：整编 toolchain 的全量命令行会把日志撑到几十 MB。
+          # 失败时再以 -j1 V=s 单线程复跑一次，既是重试也保留可读的诊断信息。
+          make toolchain/install -j"$(nproc)" || make toolchain/install -j1 V=s
 
       - name: Compile only the ipk
         id: compile
         continue-on-error: true
         run: |
           cd openwrt
-          make "${{ github.event.inputs.package }}/compile" -j"$(nproc)" V=s
+          make "${{ github.event.inputs.package }}/compile" -j"$(nproc)" || \
+            make "${{ github.event.inputs.package }}/compile" -j1 V=s
 
       - name: Collect ipk
         run: |
